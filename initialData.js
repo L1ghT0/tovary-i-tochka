@@ -1,5 +1,6 @@
 'use strict'
 
+export const MAX_AMOUNT_OF_ITEMS_COULD_BE_DELIVERED_IN_CLOSEST_DATE = 184; // this variable is not supposed to be declared like this as much as all data in this file
 export const NARROW_NO_BREAK_SPACE = '\u202F';
 
 // all the values below has been taken from figma pattern in order to initialize app

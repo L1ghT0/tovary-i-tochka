@@ -1279,7 +1279,10 @@ main{
     line-height: 24px; /* 150% */
     width: 153px;
 }
-
+.closest-delivery-date,
+.another-delivery-date{
+    display: none;
+}
 .place-taken-adress{
     font-family: Segoe UI, sans-serif;
     font-size: 16px;
@@ -1322,17 +1325,17 @@ main{
     font-weight: 400;
     line-height: 24px; /* 150% */
 }
-.delivery-items{
+.ready-to-deliver-items{
     display: flex;
     gap: 8px;
 }
-.delivery-items>div{
+.ready-to-deliver-items>div{
     border-radius: 8px;
     width: 40px;
     height: 56px;
     position: relative;
 }
-.delivery-items .red-circle-number{
+.ready-to-deliver-items .red-circle-number{
     top: -8px;
     left: 18px;
 }
@@ -1340,9 +1343,7 @@ main{
     left: 28px;
 }
 .pencils-item .red-circle-number span{
-    padding: 0;
     text-align: center;
-
 }
 .another-delivery-date .mobileCase-item .red-circle-number{
     left: 24px;

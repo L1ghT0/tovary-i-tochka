@@ -1,10 +1,13 @@
 import {items} from "../../initialData.js";
-import {setTotals} from "../../index.js";
+import {setTotals, refresh_data} from "../../index.js";
 
+// initialize checkboxes
 let select_all = document.getElementById('select-all-input');
 select_all.checked = true;  // initial value of select all checkbox
 toggle_select_all_items();  // init other item-checkboxes with same value as 'select all'
 
+
+// toggle every item checkbox when select-all checked
 select_all.addEventListener('input', (e) => {
     toggle_select_all_items();
 })
@@ -15,9 +18,11 @@ function toggle_select_all_items() {
         input.checked = select_all.checked; // toggle them all same as 'select_all'
     }
     items.forEach(item => item.selected = select_all.checked);
-    setTotals();    // refresh totals
+    refresh_data();   // refresh all data
 }
 
+
+// toggle 'select-all' when every item is selected
 let select_item_checkboxes = Array.prototype.slice.call(document.querySelectorAll('.item .select-input'));
 for (let select_item_checkbox of select_item_checkboxes) {
     select_item_checkbox.addEventListener('input', (e) => {    // automatically toggle 'select all' in true in case every item is selected
@@ -27,7 +32,7 @@ for (let select_item_checkbox of select_item_checkboxes) {
 
 
 
-
+// single-item toggle checkbox
 Array.prototype.slice.call(document.querySelectorAll('.item')).forEach(HTMLitem => {
     HTMLitem.addEventListener('click', (e) => {
         setTimeout(() => { // macrotask queue in order to get a proper value
@@ -43,7 +48,7 @@ Array.prototype.slice.call(document.querySelectorAll('.item')).forEach(HTMLitem 
 });
 
 
-
+// pay-instantly toggle checkbox
 document.getElementById('pay-instantly').addEventListener('input', (e)=>{
     if(e.target.checked){
         let totalPriceToPay = items.reduce((sum, item) => sum += item.selected ? item.priceWithDiscount*item.amount : 0, 0);
