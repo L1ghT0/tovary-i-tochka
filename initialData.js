@@ -9,7 +9,7 @@ const mobileCasePrice_withDiscount = 10500.235;
 const pencilPrice_withDiscount = 247;
 
 const TShirtPrice_withoutDiscount = 1051;
-const mobileCasePrice_withoutDiscount = 11000.235;
+const mobileCasePrice_withoutDiscount = 11500.235;
 const pencilPrice_withoutDiscount = 475;
 
 const tShirtDiscount = 100 - (TShirtPrice_withDiscount * 100) / TShirtPrice_withoutDiscount;
@@ -43,7 +43,7 @@ export const items = [
         description: 'Силиконовый чехол картхолдер (отверстия) для карт, прозрачный кейс бампер на Apple iPhone XR, MobiSafe',
         imageUrl: 'images/items/MobileCase.png',
         currency: 'сом',
-        price: 11000.235,
+        price: 11500.235,
         priceWithDiscount: 10500.235,
         discount: mobileCaseDiscount,
         amount: 200,

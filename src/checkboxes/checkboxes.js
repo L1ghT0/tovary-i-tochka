@@ -1,5 +1,5 @@
 import {items} from "../../initialData.js";
-import {setTotals, refresh_data} from "../../index.js";
+import {setTotals, refresh_data, insertingSpaceInLongPrice} from "../../index.js";
 
 // initialize checkboxes
 let select_all = document.getElementById('select-all-input');
@@ -52,7 +52,7 @@ Array.prototype.slice.call(document.querySelectorAll('.item')).forEach(HTMLitem 
 document.getElementById('pay-instantly').addEventListener('input', (e)=>{
     if(e.target.checked){
         let totalPriceToPay = items.reduce((sum, item) => sum += item.selected ? item.priceWithDiscount*item.amount : 0, 0);
-        document.getElementById('submit').innerText = `Оплатить ${totalPriceToPay}`;
+        document.getElementById('submit').innerText = `Оплатить ${insertingSpaceInLongPrice(String(totalPriceToPay), false)}`;
         document.getElementById('pay-right-away-notice').hidden = true;
     } else{
         document.getElementById('submit').innerText = 'Заказать';

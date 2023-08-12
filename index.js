@@ -37,10 +37,10 @@ function setCounterValue(item) {
 
 function calculatePrice(item) {
     Array.prototype.slice.call(document.querySelectorAll(`.with-discount .${item.name}-price`)).forEach(price => {
-        price.firstChild.nextSibling.innerText = Math.round(item.priceWithDiscount * item.amount * 100) / 100
+        price.firstChild.nextSibling.innerText = insertingSpaceInLongPrice(String(Math.round(item.priceWithDiscount * item.amount * 100) / 100), true)
     });
     Array.prototype.slice.call(document.querySelectorAll(`.without-discount .${item.name}-price`)).forEach(price => {
-        price.firstChild.innerText = Math.round(item.price * item.amount * 100) / 100
+        price.firstChild.innerText = insertingSpaceInLongPrice(String(Math.round(item.price * item.amount * 100) / 100), true)
     })
 }
 
@@ -56,14 +56,16 @@ export function setTotals() {
     let totalDiscount = (Math.round((totalPriceWithoutDiscount - totalPriceWithDiscount) * 100) / 100);
     let total_item_amount = items.reduce((sum, item) => sum += item.selected ? item.amount : 0, 0)
 
-    document.getElementById('total-price-with-discount').innerText = totalPriceWithDiscount;
-    document.getElementById('total-price-without-discount').innerText = totalPriceWithoutDiscount;
-    document.getElementById('total-discount').innerText = totalDiscount;
-    document.getElementById('total-items').innerText = total_item_amount;
+    document.getElementById('total-price-with-discount').innerText      = insertingSpaceInLongPrice(String(totalPriceWithDiscount), false);
+    document.getElementById('total-price-without-discount').innerText   = insertingSpaceInLongPrice(String(totalPriceWithoutDiscount), false);
+    document.getElementById('total-discount').innerText                 = insertingSpaceInLongPrice(String(totalDiscount), true);
+    document.getElementById('total-items').innerText                    = insertingSpaceInLongPrice(String(total_item_amount), false);
     document.getElementById('pay-instantly').checked
-        ? document.getElementById('submit').innerText = `Оплатить ${totalPriceWithDiscount}`
-        : document.getElementById('submit').innerText = 'Заказать';
+        ? document.getElementById('submit').innerText                   = `Оплатить ${insertingSpaceInLongPrice(String(totalPriceWithDiscount), false)}`
+        : document.getElementById('submit').innerText                   = 'Заказать';
 }
+
+
 
 
 
@@ -125,4 +127,41 @@ function shouldHideDeliveryDates(){ // we do not show the whole block when there
     Array.prototype.slice.call(document.querySelectorAll(`.another-delivery-date  .ready-to-deliver-items>div`)).filter(item=> item.style.display === 'none').length === items.length
         ? document.querySelector('.another-delivery-date').style.display = 'none'
         : document.querySelector('.another-delivery-date').style.display = 'flex'
+}
+
+
+
+
+
+
+
+
+// long price parsing;
+export function insertingSpaceInLongPrice(string, narrowNoBreakSpace){
+
+    if(typeof string !== 'string'){ // we only process strings
+        return string;
+    }
+
+    let space = narrowNoBreakSpace ? '\u202F' : ' '; // 2 different spaces
+    let step = 0;
+
+    let arrOfString = string.split('.');
+    let stringToParse = arrOfString[0];
+    let restOfString = '';
+
+    for (let i = 1; i < arrOfString.length; i++){
+        restOfString += '.' + arrOfString[i];   // save the rest we don't parse
+    }
+
+    return stringToParse.length > 3
+        ? stringToParse.split('').reverse().map(symbol => {
+            step++;
+            if(step === 3){ // every 4th symbol inserts space behind it
+                step = 0;
+                return space + symbol;
+            }
+            return symbol;
+            }).reverse().join('') + restOfString
+        : string
 }
