@@ -7,10 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script defer src="index.js" type="module"></script>
     <script defer src="src/animation/animation.js"></script>
-<!--    <link href="https://fonts.cdnfonts.com/css/segoe-ui-variable-static-display" rel="stylesheet">-->
+    <script defer src="src/modals/modals.js" type="module"></script>
 </head>
 <body>
 <div class="app-wrapper">
+    <div class="modals-background"></div>
     <header>
         <div class="header-wrapper">
             <div class="header-left-block">
@@ -45,674 +46,759 @@
     </header>
     <div class="content-main">
         <div class="content-wrapper">
-        <main>
-            <div class="content-shopping-trolley content-padding-container-mobile-version">
-                <h1>Корзина</h1>
-                <div class="selected-items">
-                    <div class="items-top-header">
-                        <input type="checkbox" id="select-all-input" class="select-input">
-                        <label for="select-all-input" class="select-checkbox">Выбрать все</label>
-                        <span class="arrow-collapse"></span>
-                    </div>
-                    <span class="line desktop-line"></span>
-                    <div class="items">
-                        <div class="item" id="0">
-                            <span class="line mobile-line"></span>
-                            <div class="item-leftside">
-                                <div>
-                                    <input type="checkbox" id="item0-select-input" class="select-input">
-                                    <label for="item0-select-input" class="select-checkbox"></label>
-                                    <label for="item0-select-input" class="item-label">
-                                        <div class="item-image TShirt-item"></div>
-                                    </label>
-                                </div>
-                                <div class="item-description">
-                                    <div class="item-description-container">
-                                        <span class="description-text">
-                                            <div class="price-mobile-version">
-                                                <div class="with-discount">
-                                                    <span class="TShirt-price">
-                                                        <h4>522 </h4>
-                                                        <h4>сом</h4>
-                                                    </span>
-                                                </div>
-                                                <div class="without-discount"><span
-                                                        class="TShirt-price"><span>1051</span> сом</span></div>
-                                                </div>
-                                            <label for="item0-select-input" class="item-label">
-                                                <p class="item-name">Футболка UZcotton мужская</p>
-                                            </label>
-                                            <p class="additional-item-info">
-                                                <span class="item-color">Цвет: белый </span>
-                                                <span class="item-size">Размер: 56</span>
-                                            </p>
-                                        </span>
+            <main>
+                <div class="content-shopping-trolley content-padding-container-mobile-version">
+                    <h1>Корзина</h1>
+                    <div class="selected-items">
+                        <div class="items-top-header">
+                            <input type="checkbox" id="select-all-input" class="select-input">
+                            <label for="select-all-input" class="select-checkbox">Выбрать все</label>
+                            <span class="arrow-collapse"></span>
+                        </div>
+                        <span class="line desktop-line"></span>
+                        <div class="items">
+                            <div class="item" id="0">
+                                <span class="line mobile-line"></span>
+                                <div class="item-leftside">
+                                    <div>
+                                        <input type="checkbox" id="item0-select-input" class="select-input">
+                                        <label for="item0-select-input" class="select-checkbox"></label>
+                                        <label for="item0-select-input" class="item-label">
+                                            <div class="item-image TShirt-item"></div>
+                                        </label>
                                     </div>
-                                    <div class="location">
-                                        <p>Коледино WB</p>
-                                        <p class="organization-name">OOO Вайлдберриз</p>
-                                        <span class="organization-info-icon">
-                                            <img src="src/images/assets/info.svg" alt="info">
-                                            <div class="organization-additional-info">
-                                                <h5>OOO «ВАЙЛДБЕРРИЗ»</h5>
-                                                <p>ОГРН: 5167746237148</p>
-                                                <p>129337, Москва, улица Красная Сосна, 2, корпус 1, стр. 1, помещение 2, офис 34</p>
+                                    <div class="item-description">
+                                        <div class="item-description-container">
+                                            <span class="description-text">
+                                                <div class="price-mobile-version">
+                                                    <div class="with-discount">
+                                                        <span class="TShirt-price">
+                                                            <h4>522 </h4>
+                                                            <h4>сом</h4>
+                                                        </span>
+                                                    </div>
+                                                    <div class="without-discount"><span
+                                                            class="TShirt-price"><span>1051</span> сом</span></div>
+                                                    </div>
+                                                <label for="item0-select-input" class="item-label">
+                                                    <p class="item-name">Футболка UZcotton мужская</p>
+                                                </label>
+                                                <p class="additional-item-info">
+                                                    <span class="item-color">Цвет: белый </span>
+                                                    <span class="item-size">Размер: 56</span>
+                                                </p>
+                                            </span>
+                                        </div>
+                                        <div class="location">
+                                            <p>Коледино WB</p>
+                                            <p class="organization-name">OOO Вайлдберриз</p>
+                                            <span class="organization-info-icon">
+                                                <img src="src/images/assets/info.svg" alt="info">
+                                                <div class="organization-additional-info">
+                                                    <h5>OOO «ВАЙЛДБЕРРИЗ»</h5>
+                                                    <p>ОГРН: 5167746237148</p>
+                                                    <p>129337, Москва, улица Красная Сосна, 2, корпус 1, стр. 1, помещение 2, офис 34</p>
+                                                </div>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-rightside">
+                                    <div class="rightside-container">
+                                        <div class="counter">
+                                            <span class="decrease">−</span>
+                                            <span class="amount-of-items amount-of-TShirts"
+                                                  id="amount-of-TShirts">1</span>
+                                            <span class="increase" id="increase">+</span>
+                                        </div>
+                                        <div class="amount-of-left-items"><span>Осталось 2 шт.</span></div>
+                                        <div class="item-icons">
+                                            <svg class="heart" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                 viewBox="0 0 20 20" fill="none">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M3.03399 4.05857C2.26592 4.75224 1.76687 5.83284 1.99496 7.42928C2.22335 9.02783 3.26497 10.6852 4.80439 12.3478C6.25868 13.9184 8.10965 15.4437 9.99999 16.874C11.8903 15.4437 13.7413 13.9184 15.1956 12.3478C16.7351 10.6852 17.7767 9.02783 18.005 7.4293C18.2331 5.83285 17.734 4.75224 16.9659 4.05856C16.1767 3.34572 15.055 3 14 3C12.132 3 11.0924 4.08479 10.5177 4.68443C10.4581 4.7466 10.4035 4.80356 10.3535 4.85355C10.1583 5.04882 9.84169 5.04882 9.64643 4.85355C9.59644 4.80356 9.54185 4.7466 9.48227 4.68443C8.9076 4.08479 7.868 3 5.99999 3C4.94498 3 3.82328 3.34573 3.03399 4.05857ZM2.36374 3.31643C3.37372 2.40427 4.75205 2 5.99999 2C8.07126 2 9.34542 3.11257 9.99999 3.77862C10.6545 3.11257 11.9287 2 14 2C15.2479 2 16.6262 2.40428 17.6362 3.31644C18.6674 4.24776 19.2669 5.66715 18.995 7.5707C18.7233 9.47217 17.515 11.3148 15.9294 13.0272C14.3355 14.7486 12.3064 16.3952 10.3 17.9C10.1222 18.0333 9.87776 18.0333 9.69999 17.9C7.69356 16.3952 5.66446 14.7485 4.07063 13.0272C2.48506 11.3148 1.27668 9.47217 1.00501 7.57072C0.733043 5.66716 1.33253 4.24776 2.36374 3.31643Z"
+                                                      fill="black"/>
+                                            </svg>
+                                            <svg class="trashBin" xmlns="http://www.w3.org/2000/svg" width="20"
+                                                 height="20"
+                                                 viewBox="0 0 20 20" fill="none">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M2.5 5C2.5 4.72386 2.72386 4.5 3 4.5H17C17.2761 4.5 17.5 4.72386 17.5 5C17.5 5.27614 17.2761 5.5 17 5.5H3C2.72386 5.5 2.5 5.27614 2.5 5Z"
+                                                      fill="black"/>
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M3.4584 4.5H16.5059L15.6411 15.6926C15.5405 16.9947 14.4546 18 13.1486 18H6.84639C5.54299 18 4.45829 16.9986 4.35435 15.6994L3.4584 4.5ZM4.5416 5.5L5.35117 15.6196C5.41353 16.3992 6.06435 17 6.84639 17H13.1486C13.9322 17 14.5837 16.3968 14.6441 15.6155L15.4256 5.5H4.5416Z"
+                                                      fill="black"/>
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M13 5.5H7V3.46875C7 2.65758 7.65758 2 8.46875 2H11.5312C12.3424 2 13 2.65758 13 3.46875V5.5ZM8.46875 3C8.20987 3 8 3.20987 8 3.46875V4.5H12V3.46875C12 3.20987 11.7901 3 11.5312 3H8.46875Z"
+                                                      fill="black"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="price">
+                                        <div class="with-discount">
+                                            <span class="TShirt-price">
+                                                <h3 class="item-price-with-discount">522</h3>
+                                                <h4>сом</h4>
+                                            </span>
+                                        </div>
+                                        <div class="without-discount">
+                                            <span class="TShirt-price TShirt-price-without-discount-hover"><span
+                                                    class="item-price-without-discount">1051</span> сом</span>
+                                            <div class="item-discount TShirt-discount-info">
+                                                <div class="discount-types">
+                                                    <p>Скидка  <span class="amount-of-discount-on-item"
+                                                                     id="item-0-discount">0</span>%</p>
+                                                    <p>Скидка покупателя  <span
+                                                            class="personal-amount-of-discount">0</span>%</p>
+                                                </div>
+                                                <div class="discount-prices">
+                                                    <p>−<span class="discount-price-on-item" id="item-0-discount-price">0</span>
+                                                        сом</p>
+                                                    <p>−<span class="personal-discount-price">0</span> сом</p>
+                                                </div>
                                             </div>
-                                        </span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="item-rightside">
-                                <div class="rightside-container">
-                                    <div class="counter">
-                                        <span class="decrease">−</span>
-                                        <span class="amount-of-items amount-of-TShirts" id="amount-of-TShirts">1</span>
-                                        <span class="increase" id="increase">+</span>
+                            <div class="item" id="1">
+                                <span class="line mobile-line"></span>
+                                <div class="item-leftside">
+                                    <div>
+                                        <input type="checkbox" id="item1-select-input" class="select-input">
+                                        <label for="item1-select-input" class="select-checkbox"></label>
+                                        <label for="item1-select-input" class="item-label">
+                                            <div class="item-image mobileCase-item"></div>
+                                        </label>
                                     </div>
-                                    <div class="amount-of-left-items"><span>Осталось 2 шт.</span></div>
-                                    <div class="item-icons">
-                                        <svg class="heart" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                             viewBox="0 0 20 20" fill="none">
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                  d="M3.03399 4.05857C2.26592 4.75224 1.76687 5.83284 1.99496 7.42928C2.22335 9.02783 3.26497 10.6852 4.80439 12.3478C6.25868 13.9184 8.10965 15.4437 9.99999 16.874C11.8903 15.4437 13.7413 13.9184 15.1956 12.3478C16.7351 10.6852 17.7767 9.02783 18.005 7.4293C18.2331 5.83285 17.734 4.75224 16.9659 4.05856C16.1767 3.34572 15.055 3 14 3C12.132 3 11.0924 4.08479 10.5177 4.68443C10.4581 4.7466 10.4035 4.80356 10.3535 4.85355C10.1583 5.04882 9.84169 5.04882 9.64643 4.85355C9.59644 4.80356 9.54185 4.7466 9.48227 4.68443C8.9076 4.08479 7.868 3 5.99999 3C4.94498 3 3.82328 3.34573 3.03399 4.05857ZM2.36374 3.31643C3.37372 2.40427 4.75205 2 5.99999 2C8.07126 2 9.34542 3.11257 9.99999 3.77862C10.6545 3.11257 11.9287 2 14 2C15.2479 2 16.6262 2.40428 17.6362 3.31644C18.6674 4.24776 19.2669 5.66715 18.995 7.5707C18.7233 9.47217 17.515 11.3148 15.9294 13.0272C14.3355 14.7486 12.3064 16.3952 10.3 17.9C10.1222 18.0333 9.87776 18.0333 9.69999 17.9C7.69356 16.3952 5.66446 14.7485 4.07063 13.0272C2.48506 11.3148 1.27668 9.47217 1.00501 7.57072C0.733043 5.66716 1.33253 4.24776 2.36374 3.31643Z"
-                                                  fill="black"/>
-                                        </svg>
-                                        <svg class="trashBin" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                             viewBox="0 0 20 20" fill="none">
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                  d="M2.5 5C2.5 4.72386 2.72386 4.5 3 4.5H17C17.2761 4.5 17.5 4.72386 17.5 5C17.5 5.27614 17.2761 5.5 17 5.5H3C2.72386 5.5 2.5 5.27614 2.5 5Z"
-                                                  fill="black"/>
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                  d="M3.4584 4.5H16.5059L15.6411 15.6926C15.5405 16.9947 14.4546 18 13.1486 18H6.84639C5.54299 18 4.45829 16.9986 4.35435 15.6994L3.4584 4.5ZM4.5416 5.5L5.35117 15.6196C5.41353 16.3992 6.06435 17 6.84639 17H13.1486C13.9322 17 14.5837 16.3968 14.6441 15.6155L15.4256 5.5H4.5416Z"
-                                                  fill="black"/>
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                  d="M13 5.5H7V3.46875C7 2.65758 7.65758 2 8.46875 2H11.5312C12.3424 2 13 2.65758 13 3.46875V5.5ZM8.46875 3C8.20987 3 8 3.20987 8 3.46875V4.5H12V3.46875C12 3.20987 11.7901 3 11.5312 3H8.46875Z"
-                                                  fill="black"/>
-                                        </svg>
+                                    <div class="item-description">
+                                        <div>
+                                            <span class="description-text">
+                                                <div class="price-mobile-version">
+                                                    <div class="with-discount">
+                                                        <span class="mobileCase-price">
+                                                            <h4>2100047</h4>
+                                                            <h4>сом</h4>
+                                                        </span>
+                                                    </div>
+                                                    <div class="without-discount"><span class="mobileCase-price"><span>2300047</span> сом</span></div>
+                                                </div>
+                                                <label for="item1-select-input" class="item-label">
+                                                    <p class="item-name">Силиконовый чехол картхолдер (отверстия) для карт, прозрачный кейс бампер на Apple iPhone XR, MobiSafe</p>
+                                                </label>
+                                                <p class="additional-item-info"><span
+                                                        class="item-color">Цвет: прозрачный </span></p>
+                                            </span>
+                                        </div>
+                                        <div class="location">
+                                            <p>Коледино WB</p>
+                                            <p class="organization-name">OOO Мегапрофстиль</p>
+                                            <span class="organization-info-icon">
+                                                <img src="src/images/assets/info.svg" alt="info">
+                                                <div class="organization-additional-info">
+                                                    <h5>OOO «МЕГАПРОФСТИЛЬ»</h5>
+                                                    <p>ОГРН: 5167746237148</p>
+                                                    <p>129337, Москва, улица Красная Сосна, 2, корпус 1, стр. 1, помещение 2, офис 34</p>
+                                                </div>
+                                            </span>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="price">
-                                    <div class="with-discount">
-                                        <span class="TShirt-price">
-                                            <h3 class="item-price-with-discount">522</h3>
-                                            <h4>сом</h4>
-                                        </span>
+                                <div class="item-rightside">
+                                    <div class="rightside-container">
+                                        <div class="counter">
+                                            <span class="decrease">−</span>
+                                            <span class="amount-of-items amount-of-mobileCases"
+                                                  id="amount-of-mobileCases">200</span>
+                                            <span class="increase">+</span>
+                                        </div>
+                                        <div class="amount-of-left-items amount-of-left-items-hidden">
+                                            <span>Осталось 2 шт.</span></div>
+                                        <div class="item-icons">
+                                            <svg class="heart" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                 viewBox="0 0 20 20" fill="none">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M3.03399 4.05857C2.26592 4.75224 1.76687 5.83284 1.99496 7.42928C2.22335 9.02783 3.26497 10.6852 4.80439 12.3478C6.25868 13.9184 8.10965 15.4437 9.99999 16.874C11.8903 15.4437 13.7413 13.9184 15.1956 12.3478C16.7351 10.6852 17.7767 9.02783 18.005 7.4293C18.2331 5.83285 17.734 4.75224 16.9659 4.05856C16.1767 3.34572 15.055 3 14 3C12.132 3 11.0924 4.08479 10.5177 4.68443C10.4581 4.7466 10.4035 4.80356 10.3535 4.85355C10.1583 5.04882 9.84169 5.04882 9.64643 4.85355C9.59644 4.80356 9.54185 4.7466 9.48227 4.68443C8.9076 4.08479 7.868 3 5.99999 3C4.94498 3 3.82328 3.34573 3.03399 4.05857ZM2.36374 3.31643C3.37372 2.40427 4.75205 2 5.99999 2C8.07126 2 9.34542 3.11257 9.99999 3.77862C10.6545 3.11257 11.9287 2 14 2C15.2479 2 16.6262 2.40428 17.6362 3.31644C18.6674 4.24776 19.2669 5.66715 18.995 7.5707C18.7233 9.47217 17.515 11.3148 15.9294 13.0272C14.3355 14.7486 12.3064 16.3952 10.3 17.9C10.1222 18.0333 9.87776 18.0333 9.69999 17.9C7.69356 16.3952 5.66446 14.7485 4.07063 13.0272C2.48506 11.3148 1.27668 9.47217 1.00501 7.57072C0.733043 5.66716 1.33253 4.24776 2.36374 3.31643Z"
+                                                      fill="black"/>
+                                            </svg>
+                                            <svg class="trashBin" xmlns="http://www.w3.org/2000/svg" width="20"
+                                                 height="20"
+                                                 viewBox="0 0 20 20" fill="none">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M2.5 5C2.5 4.72386 2.72386 4.5 3 4.5H17C17.2761 4.5 17.5 4.72386 17.5 5C17.5 5.27614 17.2761 5.5 17 5.5H3C2.72386 5.5 2.5 5.27614 2.5 5Z"
+                                                      fill="black"/>
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M3.4584 4.5H16.5059L15.6411 15.6926C15.5405 16.9947 14.4546 18 13.1486 18H6.84639C5.54299 18 4.45829 16.9986 4.35435 15.6994L3.4584 4.5ZM4.5416 5.5L5.35117 15.6196C5.41353 16.3992 6.06435 17 6.84639 17H13.1486C13.9322 17 14.5837 16.3968 14.6441 15.6155L15.4256 5.5H4.5416Z"
+                                                      fill="black"/>
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M13 5.5H7V3.46875C7 2.65758 7.65758 2 8.46875 2H11.5312C12.3424 2 13 2.65758 13 3.46875V5.5ZM8.46875 3C8.20987 3 8 3.20987 8 3.46875V4.5H12V3.46875C12 3.20987 11.7901 3 11.5312 3H8.46875Z"
+                                                      fill="black"/>
+                                            </svg>
+                                        </div>
                                     </div>
-                                    <div class="without-discount">
-                                        <span class="TShirt-price TShirt-price-without-discount-hover"><span class="item-price-without-discount">1051</span> сом</span>
-                                        <div class="item-discount TShirt-discount-info">
-                                            <div class="discount-types">
-                                                <p>Скидка  <span class="amount-of-discount-on-item" id="item-0-discount">0</span>%</p>
-                                                <p>Скидка покупателя  <span class="personal-amount-of-discount">0</span>%</p>
+                                    <div class="price">
+                                        <div class="with-discount">
+                                            <span class="long-price mobileCase-price">
+                                                <h4 class="item-price-with-discount">2100047</h4>
+                                                <h4>сом</h4>
+                                            </span>
+                                        </div>
+                                        <div class="without-discount">
+                                            <span class="mobileCase-price mobileCase-price-without-discount-hover"><span
+                                                    class="item-price-without-discount">2300047</span> сом</span>
+                                            <div class="item-discount mobileCase-discount-info">
+                                                <div class="discount-types">
+                                                    <p>Скидка  <span class="amount-of-discount-on-item"
+                                                                     id="item-1-discount">0</span>%</p>
+                                                    <p>Скидка покупателя  <span
+                                                            class="personal-amount-of-discount">0</span>%</p>
+                                                </div>
+                                                <div class="discount-prices">
+                                                    <p>−<span class="discount-price-on-item" id="item-1-discount-price">0</span>
+                                                        сом</p>
+                                                    <p>−<span class="personal-discount-price">0</span> сом</p>
+                                                </div>
                                             </div>
-                                            <div class="discount-prices">
-                                                <p>−<span class="discount-price-on-item" id="item-0-discount-price">0</span> сом</p>
-                                                <p>−<span class="personal-discount-price">0</span> сом</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item" id="2">
+                                <span class="line mobile-line"></span>
+                                <div class="item-leftside">
+                                    <div>
+                                        <input type="checkbox" id="item2-select-input" class="select-input">
+                                        <label for="item2-select-input" class="select-checkbox"></label>
+                                        <label for="item2-select-input" class="item-label">
+                                            <div class="item-image pencils-item"></div>
+                                        </label>
+                                    </div>
+                                    <div class="item-description">
+                                        <div>
+                                            <span class="description-text">
+                                                <div class="price-mobile-version">
+                                                    <div class="with-discount">
+                                                        <span class="pencil-price">
+                                                            <h4>494</h4>
+                                                            <h4>сом</h4>
+                                                        </span>
+                                                    </div>
+                                                    <div class="without-discount"><span
+                                                            class="pencil-price"><span>950</span> сом</span></div>
+                                                </div>
+                                                <label for="item2-select-input" class="item-label">
+                                                    <p class="item-name">Карандаши цветные Faber-Castell "Замок", набор 24 цвета, заточенные, шестигранные, Faber-Castell</p>
+                                                </label>
+                                            </span>
+                                        </div>
+                                        <div class="location">
+                                            <p>Коледино WB</p>
+                                            <p class="organization-name">OOO Вайлдберриз</p>
+                                            <span class="organization-info-icon">
+                                                <img src="src/images/assets/info.svg" alt="info">
+                                                <div class="organization-additional-info">
+                                                    <h5>OOO «ВАЙЛДБЕРРИЗ»</h5>
+                                                    <p>ОГРН: 5167746237148</p>
+                                                    <p>129337, Москва, улица Красная Сосна, 2, корпус 1, стр. 1, помещение 2, офис 34</p>
+                                                </div>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-rightside">
+                                    <div class="rightside-container">
+                                        <div class="counter">
+                                            <span class="decrease">−</span>
+                                            <span class="amount-of-items amount-of-pencils"
+                                                  id="amount-of-pencils">2</span>
+                                            <span class="increase">+</span>
+                                        </div>
+                                        <div class="amount-of-left-items"><span>Осталось 2 шт.</span></div>
+                                        <div class="item-icons">
+                                            <svg class="heart" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                 viewBox="0 0 20 20" fill="none">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M3.03399 4.05857C2.26592 4.75224 1.76687 5.83284 1.99496 7.42928C2.22335 9.02783 3.26497 10.6852 4.80439 12.3478C6.25868 13.9184 8.10965 15.4437 9.99999 16.874C11.8903 15.4437 13.7413 13.9184 15.1956 12.3478C16.7351 10.6852 17.7767 9.02783 18.005 7.4293C18.2331 5.83285 17.734 4.75224 16.9659 4.05856C16.1767 3.34572 15.055 3 14 3C12.132 3 11.0924 4.08479 10.5177 4.68443C10.4581 4.7466 10.4035 4.80356 10.3535 4.85355C10.1583 5.04882 9.84169 5.04882 9.64643 4.85355C9.59644 4.80356 9.54185 4.7466 9.48227 4.68443C8.9076 4.08479 7.868 3 5.99999 3C4.94498 3 3.82328 3.34573 3.03399 4.05857ZM2.36374 3.31643C3.37372 2.40427 4.75205 2 5.99999 2C8.07126 2 9.34542 3.11257 9.99999 3.77862C10.6545 3.11257 11.9287 2 14 2C15.2479 2 16.6262 2.40428 17.6362 3.31644C18.6674 4.24776 19.2669 5.66715 18.995 7.5707C18.7233 9.47217 17.515 11.3148 15.9294 13.0272C14.3355 14.7486 12.3064 16.3952 10.3 17.9C10.1222 18.0333 9.87776 18.0333 9.69999 17.9C7.69356 16.3952 5.66446 14.7485 4.07063 13.0272C2.48506 11.3148 1.27668 9.47217 1.00501 7.57072C0.733043 5.66716 1.33253 4.24776 2.36374 3.31643Z"
+                                                      fill="black"/>
+                                            </svg>
+                                            <svg class="trashBin" xmlns="http://www.w3.org/2000/svg" width="20"
+                                                 height="20"
+                                                 viewBox="0 0 20 20" fill="none">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M2.5 5C2.5 4.72386 2.72386 4.5 3 4.5H17C17.2761 4.5 17.5 4.72386 17.5 5C17.5 5.27614 17.2761 5.5 17 5.5H3C2.72386 5.5 2.5 5.27614 2.5 5Z"
+                                                      fill="black"/>
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M3.4584 4.5H16.5059L15.6411 15.6926C15.5405 16.9947 14.4546 18 13.1486 18H6.84639C5.54299 18 4.45829 16.9986 4.35435 15.6994L3.4584 4.5ZM4.5416 5.5L5.35117 15.6196C5.41353 16.3992 6.06435 17 6.84639 17H13.1486C13.9322 17 14.5837 16.3968 14.6441 15.6155L15.4256 5.5H4.5416Z"
+                                                      fill="black"/>
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M13 5.5H7V3.46875C7 2.65758 7.65758 2 8.46875 2H11.5312C12.3424 2 13 2.65758 13 3.46875V5.5ZM8.46875 3C8.20987 3 8 3.20987 8 3.46875V4.5H12V3.46875C12 3.20987 11.7901 3 11.5312 3H8.46875Z"
+                                                      fill="black"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="price">
+                                        <div class="with-discount">
+                                            <span class="pencil-price">
+                                                <h3 class="item-price-with-discount">494</h3>
+                                                <h4>сом</h4>
+                                            </span>
+                                        </div>
+                                        <div class="without-discount">
+                                            <span class="pencil-price pencil-price-without-discount-hover"><span
+                                                    class="item-price-without-discount">950</span> сом</span>
+                                            <div class="item-discount pencil-discount-info">
+                                                <div class="discount-types">
+                                                    <p>Скидка  <span class="amount-of-discount-on-item"
+                                                                     id="item-2-discount">0</span>%</p>
+                                                    <p>Скидка покупателя  <span
+                                                            class="personal-amount-of-discount">0</span>%</p>
+                                                </div>
+                                                <div class="discount-prices">
+                                                    <p>−<span class="discount-price-on-item" id="item-2-discount-price">0</span>
+                                                        сом</p>
+                                                    <p>−<span class="personal-discount-price">0</span> сом</p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="item" id="1">
-                            <span class="line mobile-line"></span>
-                            <div class="item-leftside">
-                                <div>
-                                    <input type="checkbox" id="item1-select-input" class="select-input">
-                                    <label for="item1-select-input" class="select-checkbox"></label>
-                                    <label for="item1-select-input" class="item-label">
-                                        <div class="item-image mobileCase-item"></div>
-                                    </label>
-                                </div>
-                                <div class="item-description">
+                    </div>
+                    <div class="not-found-items">
+                        <div class="not-found-items-top-header">
+                            <p>Отсутствуют · 3 товара</p>
+                            <span class="arrow-collapse"></span>
+                        </div>
+                        <span class="line desktop-line"></span>
+                        <div class="items">
+                            <div class="item not-found-item">
+                                <span class="line mobile-line"></span>
+                                <div class="item-leftside">
                                     <div>
-                                        <span class="description-text">
-                                            <div class="price-mobile-version">
-                                                <div class="with-discount">
-                                                    <span class="mobileCase-price">
-                                                        <h4>2100047</h4>
-                                                        <h4>сом</h4>
-                                                    </span>
-                                                </div>
-                                                <div class="without-discount"><span class="mobileCase-price"><span>2300047</span> сом</span></div>
-                                            </div>
-                                            <label for="item1-select-input" class="item-label">
-                                                <p class="item-name">Силиконовый чехол картхолдер (отверстия) для карт, прозрачный кейс бампер на Apple iPhone XR, MobiSafe</p>
-                                            </label>
-                                            <p class="additional-item-info"><span
-                                                    class="item-color">Цвет: прозрачный </span></p>
-                                        </span>
+                                        <div class="item-image TShirt-item not-found-item-image"></div>
                                     </div>
-                                    <div class="location">
-                                        <p>Коледино WB</p>
-                                        <p class="organization-name">OOO Мегапрофстиль</p>
-                                        <span class="organization-info-icon">
-                                            <img src="src/images/assets/info.svg" alt="info">
-                                            <div class="organization-additional-info">
-                                                <h5>OOO «МЕГАПРОФСТИЛЬ»</h5>
-                                                <p>ОГРН: 5167746237148</p>
-                                                <p>129337, Москва, улица Красная Сосна, 2, корпус 1, стр. 1, помещение 2, офис 34</p>
-                                            </div>
-                                        </span>
+                                    <div class="item-description not-found-item-description">
+                                        <div>
+                                            <span class="description-text">
+                                                <div class="price-mobile-version">
+                                                    <div class="with-discount"><p>522 сом</p></div>
+                                                    <div class="without-discount"><span>1051 сом</span></div>
+                                                </div>
+                                                <p class="item-name not-found-item-name not-found-text-color">Футболка UZcotton мужская</p>
+                                                <p class="additional-item-info not-found-text-color">
+                                                    <span class="item-color">Цвет: белый </span>
+                                                    <span class="item-size">Размер: 56</span>
+                                                </p>
+                                            </span>
+                                        </div>
+                                        <div class="location not-found-item-location">
+                                            <p>Коледино WB</p>
+                                            <p class="organization-name">OOO Вайлдберриз</p>
+                                            <span><img src="src/images/assets/info.svg" alt="info"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-rightside">
+                                    <div class="rightside-container">
+                                        <div class="item-icons not-found-item-icons">
+                                            <svg class="heart" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                 viewBox="0 0 20 20" fill="none">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M3.03399 4.05857C2.26592 4.75224 1.76687 5.83284 1.99496 7.42928C2.22335 9.02783 3.26497 10.6852 4.80439 12.3478C6.25868 13.9184 8.10965 15.4437 9.99999 16.874C11.8903 15.4437 13.7413 13.9184 15.1956 12.3478C16.7351 10.6852 17.7767 9.02783 18.005 7.4293C18.2331 5.83285 17.734 4.75224 16.9659 4.05856C16.1767 3.34572 15.055 3 14 3C12.132 3 11.0924 4.08479 10.5177 4.68443C10.4581 4.7466 10.4035 4.80356 10.3535 4.85355C10.1583 5.04882 9.84169 5.04882 9.64643 4.85355C9.59644 4.80356 9.54185 4.7466 9.48227 4.68443C8.9076 4.08479 7.868 3 5.99999 3C4.94498 3 3.82328 3.34573 3.03399 4.05857ZM2.36374 3.31643C3.37372 2.40427 4.75205 2 5.99999 2C8.07126 2 9.34542 3.11257 9.99999 3.77862C10.6545 3.11257 11.9287 2 14 2C15.2479 2 16.6262 2.40428 17.6362 3.31644C18.6674 4.24776 19.2669 5.66715 18.995 7.5707C18.7233 9.47217 17.515 11.3148 15.9294 13.0272C14.3355 14.7486 12.3064 16.3952 10.3 17.9C10.1222 18.0333 9.87776 18.0333 9.69999 17.9C7.69356 16.3952 5.66446 14.7485 4.07063 13.0272C2.48506 11.3148 1.27668 9.47217 1.00501 7.57072C0.733043 5.66716 1.33253 4.24776 2.36374 3.31643Z"
+                                                      fill="black"/>
+                                            </svg>
+                                            <svg class="trashBin" xmlns="http://www.w3.org/2000/svg" width="20"
+                                                 height="20"
+                                                 viewBox="0 0 20 20" fill="none">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M2.5 5C2.5 4.72386 2.72386 4.5 3 4.5H17C17.2761 4.5 17.5 4.72386 17.5 5C17.5 5.27614 17.2761 5.5 17 5.5H3C2.72386 5.5 2.5 5.27614 2.5 5Z"
+                                                      fill="black"/>
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M3.4584 4.5H16.5059L15.6411 15.6926C15.5405 16.9947 14.4546 18 13.1486 18H6.84639C5.54299 18 4.45829 16.9986 4.35435 15.6994L3.4584 4.5ZM4.5416 5.5L5.35117 15.6196C5.41353 16.3992 6.06435 17 6.84639 17H13.1486C13.9322 17 14.5837 16.3968 14.6441 15.6155L15.4256 5.5H4.5416Z"
+                                                      fill="black"/>
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M13 5.5H7V3.46875C7 2.65758 7.65758 2 8.46875 2H11.5312C12.3424 2 13 2.65758 13 3.46875V5.5ZM8.46875 3C8.20987 3 8 3.20987 8 3.46875V4.5H12V3.46875C12 3.20987 11.7901 3 11.5312 3H8.46875Z"
+                                                      fill="black"/>
+                                            </svg>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="item-rightside">
-                                <div class="rightside-container">
-                                    <div class="counter">
-                                        <span class="decrease">−</span>
-                                        <span class="amount-of-items amount-of-mobileCases" id="amount-of-mobileCases">200</span>
-                                        <span class="increase">+</span>
+                            <div class="item not-found-item">
+                                <span class="line mobile-line"></span>
+                                <div class="item-leftside">
+                                    <div>
+                                        <div class="item-image mobileCase-item not-found-item-image"></div>
                                     </div>
-                                    <div class="amount-of-left-items amount-of-left-items-hidden">
-                                        <span>Осталось 2 шт.</span></div>
-                                    <div class="item-icons">
-                                        <svg class="heart" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                             viewBox="0 0 20 20" fill="none">
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                  d="M3.03399 4.05857C2.26592 4.75224 1.76687 5.83284 1.99496 7.42928C2.22335 9.02783 3.26497 10.6852 4.80439 12.3478C6.25868 13.9184 8.10965 15.4437 9.99999 16.874C11.8903 15.4437 13.7413 13.9184 15.1956 12.3478C16.7351 10.6852 17.7767 9.02783 18.005 7.4293C18.2331 5.83285 17.734 4.75224 16.9659 4.05856C16.1767 3.34572 15.055 3 14 3C12.132 3 11.0924 4.08479 10.5177 4.68443C10.4581 4.7466 10.4035 4.80356 10.3535 4.85355C10.1583 5.04882 9.84169 5.04882 9.64643 4.85355C9.59644 4.80356 9.54185 4.7466 9.48227 4.68443C8.9076 4.08479 7.868 3 5.99999 3C4.94498 3 3.82328 3.34573 3.03399 4.05857ZM2.36374 3.31643C3.37372 2.40427 4.75205 2 5.99999 2C8.07126 2 9.34542 3.11257 9.99999 3.77862C10.6545 3.11257 11.9287 2 14 2C15.2479 2 16.6262 2.40428 17.6362 3.31644C18.6674 4.24776 19.2669 5.66715 18.995 7.5707C18.7233 9.47217 17.515 11.3148 15.9294 13.0272C14.3355 14.7486 12.3064 16.3952 10.3 17.9C10.1222 18.0333 9.87776 18.0333 9.69999 17.9C7.69356 16.3952 5.66446 14.7485 4.07063 13.0272C2.48506 11.3148 1.27668 9.47217 1.00501 7.57072C0.733043 5.66716 1.33253 4.24776 2.36374 3.31643Z"
-                                                  fill="black"/>
-                                        </svg>
-                                        <svg class="trashBin" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                             viewBox="0 0 20 20" fill="none">
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                  d="M2.5 5C2.5 4.72386 2.72386 4.5 3 4.5H17C17.2761 4.5 17.5 4.72386 17.5 5C17.5 5.27614 17.2761 5.5 17 5.5H3C2.72386 5.5 2.5 5.27614 2.5 5Z"
-                                                  fill="black"/>
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                  d="M3.4584 4.5H16.5059L15.6411 15.6926C15.5405 16.9947 14.4546 18 13.1486 18H6.84639C5.54299 18 4.45829 16.9986 4.35435 15.6994L3.4584 4.5ZM4.5416 5.5L5.35117 15.6196C5.41353 16.3992 6.06435 17 6.84639 17H13.1486C13.9322 17 14.5837 16.3968 14.6441 15.6155L15.4256 5.5H4.5416Z"
-                                                  fill="black"/>
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                  d="M13 5.5H7V3.46875C7 2.65758 7.65758 2 8.46875 2H11.5312C12.3424 2 13 2.65758 13 3.46875V5.5ZM8.46875 3C8.20987 3 8 3.20987 8 3.46875V4.5H12V3.46875C12 3.20987 11.7901 3 11.5312 3H8.46875Z"
-                                                  fill="black"/>
-                                        </svg>
+                                    <div class="item-description not-found-item-description">
+                                        <div>
+                                            <span class="description-text">
+                                                <div class="price-mobile-version">
+                                                    <div class="with-discount"><p>2 100 047 сом</p></div>
+                                                    <div class="without-discount"><span>2 300 047 сом</span></div>
+                                                </div>
+                                                <p class="item-name not-found-item-name not-found-text-color">Силиконовый чехол картхолдер (отверстия) для карт, прозрачный кейс бампер на Apple iPhone XR, MobiSafe</p>
+                                                <p class="additional-item-info not-found-text-color"><span
+                                                        class="item-color">Цвет: прозрачный </span></p>
+                                            </span>
+                                        </div>
+                                        <div class="location not-found-item-location">
+                                            <p>Коледино WB</p>
+                                            <p class="organization-name">OOO Мегапрофстиль</p>
+                                            <span><img src="src/images/assets/info.svg" alt="info"></span>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="price">
-                                    <div class="with-discount">
-                                        <span class="long-price mobileCase-price">
-                                            <h4 class="item-price-with-discount">2100047</h4>
-                                            <h4>сом</h4>
-                                        </span>
+                                <div class="item-rightside">
+                                    <div class="rightside-container">
+                                        <div class="item-icons not-found-item-icons">
+                                            <svg class="heart" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                 viewBox="0 0 20 20" fill="none">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M3.03399 4.05857C2.26592 4.75224 1.76687 5.83284 1.99496 7.42928C2.22335 9.02783 3.26497 10.6852 4.80439 12.3478C6.25868 13.9184 8.10965 15.4437 9.99999 16.874C11.8903 15.4437 13.7413 13.9184 15.1956 12.3478C16.7351 10.6852 17.7767 9.02783 18.005 7.4293C18.2331 5.83285 17.734 4.75224 16.9659 4.05856C16.1767 3.34572 15.055 3 14 3C12.132 3 11.0924 4.08479 10.5177 4.68443C10.4581 4.7466 10.4035 4.80356 10.3535 4.85355C10.1583 5.04882 9.84169 5.04882 9.64643 4.85355C9.59644 4.80356 9.54185 4.7466 9.48227 4.68443C8.9076 4.08479 7.868 3 5.99999 3C4.94498 3 3.82328 3.34573 3.03399 4.05857ZM2.36374 3.31643C3.37372 2.40427 4.75205 2 5.99999 2C8.07126 2 9.34542 3.11257 9.99999 3.77862C10.6545 3.11257 11.9287 2 14 2C15.2479 2 16.6262 2.40428 17.6362 3.31644C18.6674 4.24776 19.2669 5.66715 18.995 7.5707C18.7233 9.47217 17.515 11.3148 15.9294 13.0272C14.3355 14.7486 12.3064 16.3952 10.3 17.9C10.1222 18.0333 9.87776 18.0333 9.69999 17.9C7.69356 16.3952 5.66446 14.7485 4.07063 13.0272C2.48506 11.3148 1.27668 9.47217 1.00501 7.57072C0.733043 5.66716 1.33253 4.24776 2.36374 3.31643Z"
+                                                      fill="black"/>
+                                            </svg>
+                                            <svg class="trashBin" xmlns="http://www.w3.org/2000/svg" width="20"
+                                                 height="20"
+                                                 viewBox="0 0 20 20" fill="none">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M2.5 5C2.5 4.72386 2.72386 4.5 3 4.5H17C17.2761 4.5 17.5 4.72386 17.5 5C17.5 5.27614 17.2761 5.5 17 5.5H3C2.72386 5.5 2.5 5.27614 2.5 5Z"
+                                                      fill="black"/>
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M3.4584 4.5H16.5059L15.6411 15.6926C15.5405 16.9947 14.4546 18 13.1486 18H6.84639C5.54299 18 4.45829 16.9986 4.35435 15.6994L3.4584 4.5ZM4.5416 5.5L5.35117 15.6196C5.41353 16.3992 6.06435 17 6.84639 17H13.1486C13.9322 17 14.5837 16.3968 14.6441 15.6155L15.4256 5.5H4.5416Z"
+                                                      fill="black"/>
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M13 5.5H7V3.46875C7 2.65758 7.65758 2 8.46875 2H11.5312C12.3424 2 13 2.65758 13 3.46875V5.5ZM8.46875 3C8.20987 3 8 3.20987 8 3.46875V4.5H12V3.46875C12 3.20987 11.7901 3 11.5312 3H8.46875Z"
+                                                      fill="black"/>
+                                            </svg>
+                                        </div>
                                     </div>
-                                    <div class="without-discount">
-                                        <span class="mobileCase-price mobileCase-price-without-discount-hover"><span class="item-price-without-discount">2300047</span> сом</span>
-                                        <div class="item-discount mobileCase-discount-info">
-                                            <div class="discount-types">
-                                                <p>Скидка  <span class="amount-of-discount-on-item" id="item-1-discount">0</span>%</p>
-                                                <p>Скидка покупателя  <span class="personal-amount-of-discount">0</span>%</p>
-                                            </div>
-                                            <div class="discount-prices">
-                                                <p>−<span class="discount-price-on-item" id="item-1-discount-price">0</span> сом</p>
-                                                <p>−<span class="personal-discount-price">0</span> сом</p>
-                                            </div>
+                                </div>
+                            </div>
+                            <div class="item not-found-item">
+                                <span class="line mobile-line"></span>
+                                <div class="item-leftside">
+                                    <div>
+                                        <div class="item-image pencils-item not-found-item-image"></div>
+                                    </div>
+                                    <div class="item-description not-found-item-description">
+                                        <div>
+                                            <span class="description-text">
+                                                <div class="price-mobile-version">
+                                                    <div class="with-discount"><p>494 сом</p></div>
+                                                    <div class="without-discount"><span>950 сом</span></div>
+                                                </div>
+                                                <p class="item-name not-found-item-name not-found-text-color">Карандаши цветные Faber-Castell "Замок", набор 24 цвета, заточенные, шестигранные, Faber-Castell</p>
+                                            </span>
+                                        </div>
+                                        <div class="location not-found-item-location">
+                                            <p>Коледино WB</p>
+                                            <p class="organization-name">OOO Вайлдберриз</p>
+                                            <span><img src="src/images/assets/info.svg" alt="info"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-rightside">
+                                    <div class="rightside-container">
+                                        <div class="item-icons not-found-item-icons">
+                                            <svg class="heart" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                 viewBox="0 0 20 20" fill="none">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M3.03399 4.05857C2.26592 4.75224 1.76687 5.83284 1.99496 7.42928C2.22335 9.02783 3.26497 10.6852 4.80439 12.3478C6.25868 13.9184 8.10965 15.4437 9.99999 16.874C11.8903 15.4437 13.7413 13.9184 15.1956 12.3478C16.7351 10.6852 17.7767 9.02783 18.005 7.4293C18.2331 5.83285 17.734 4.75224 16.9659 4.05856C16.1767 3.34572 15.055 3 14 3C12.132 3 11.0924 4.08479 10.5177 4.68443C10.4581 4.7466 10.4035 4.80356 10.3535 4.85355C10.1583 5.04882 9.84169 5.04882 9.64643 4.85355C9.59644 4.80356 9.54185 4.7466 9.48227 4.68443C8.9076 4.08479 7.868 3 5.99999 3C4.94498 3 3.82328 3.34573 3.03399 4.05857ZM2.36374 3.31643C3.37372 2.40427 4.75205 2 5.99999 2C8.07126 2 9.34542 3.11257 9.99999 3.77862C10.6545 3.11257 11.9287 2 14 2C15.2479 2 16.6262 2.40428 17.6362 3.31644C18.6674 4.24776 19.2669 5.66715 18.995 7.5707C18.7233 9.47217 17.515 11.3148 15.9294 13.0272C14.3355 14.7486 12.3064 16.3952 10.3 17.9C10.1222 18.0333 9.87776 18.0333 9.69999 17.9C7.69356 16.3952 5.66446 14.7485 4.07063 13.0272C2.48506 11.3148 1.27668 9.47217 1.00501 7.57072C0.733043 5.66716 1.33253 4.24776 2.36374 3.31643Z"
+                                                      fill="black"/>
+                                            </svg>
+                                            <svg class="trashBin" xmlns="http://www.w3.org/2000/svg" width="20"
+                                                 height="20"
+                                                 viewBox="0 0 20 20" fill="none">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M2.5 5C2.5 4.72386 2.72386 4.5 3 4.5H17C17.2761 4.5 17.5 4.72386 17.5 5C17.5 5.27614 17.2761 5.5 17 5.5H3C2.72386 5.5 2.5 5.27614 2.5 5Z"
+                                                      fill="black"/>
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M3.4584 4.5H16.5059L15.6411 15.6926C15.5405 16.9947 14.4546 18 13.1486 18H6.84639C5.54299 18 4.45829 16.9986 4.35435 15.6994L3.4584 4.5ZM4.5416 5.5L5.35117 15.6196C5.41353 16.3992 6.06435 17 6.84639 17H13.1486C13.9322 17 14.5837 16.3968 14.6441 15.6155L15.4256 5.5H4.5416Z"
+                                                      fill="black"/>
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M13 5.5H7V3.46875C7 2.65758 7.65758 2 8.46875 2H11.5312C12.3424 2 13 2.65758 13 3.46875V5.5ZM8.46875 3C8.20987 3 8 3.20987 8 3.46875V4.5H12V3.46875C12 3.20987 11.7901 3 11.5312 3H8.46875Z"
+                                                      fill="black"/>
+                                            </svg>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="item" id="2">
-                            <span class="line mobile-line"></span>
-                            <div class="item-leftside">
-                                <div>
-                                    <input type="checkbox" id="item2-select-input" class="select-input">
-                                    <label for="item2-select-input" class="select-checkbox"></label>
-                                    <label for="item2-select-input" class="item-label">
-                                        <div class="item-image pencils-item"></div>
-                                    </label>
-                                </div>
-                                <div class="item-description">
-                                    <div>
-                                        <span class="description-text">
-                                            <div class="price-mobile-version">
-                                                <div class="with-discount">
-                                                    <span class="pencil-price">
-                                                        <h4>494</h4>
-                                                        <h4>сом</h4>
-                                                    </span>
-                                                </div>
-                                                <div class="without-discount"><span
-                                                        class="pencil-price"><span>950</span> сом</span></div>
-                                            </div>
-                                            <label for="item2-select-input" class="item-label">
-                                                <p class="item-name">Карандаши цветные Faber-Castell "Замок", набор 24 цвета, заточенные, шестигранные, Faber-Castell</p>
-                                            </label>
-                                        </span>
-                                    </div>
-                                    <div class="location">
-                                        <p>Коледино WB</p>
-                                        <p class="organization-name">OOO Вайлдберриз</p>
-                                        <span class="organization-info-icon">
-                                            <img src="src/images/assets/info.svg" alt="info">
-                                            <div class="organization-additional-info">
-                                                <h5>OOO «ВАЙЛДБЕРРИЗ»</h5>
-                                                <p>ОГРН: 5167746237148</p>
-                                                <p>129337, Москва, улица Красная Сосна, 2, корпус 1, стр. 1, помещение 2, офис 34</p>
-                                            </div>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item-rightside">
-                                <div class="rightside-container">
-                                    <div class="counter">
-                                        <span class="decrease">−</span>
-                                        <span class="amount-of-items amount-of-pencils" id="amount-of-pencils">2</span>
-                                        <span class="increase">+</span>
-                                    </div>
-                                    <div class="amount-of-left-items"><span>Осталось 2 шт.</span></div>
-                                    <div class="item-icons">
-                                        <svg class="heart" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                             viewBox="0 0 20 20" fill="none">
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                  d="M3.03399 4.05857C2.26592 4.75224 1.76687 5.83284 1.99496 7.42928C2.22335 9.02783 3.26497 10.6852 4.80439 12.3478C6.25868 13.9184 8.10965 15.4437 9.99999 16.874C11.8903 15.4437 13.7413 13.9184 15.1956 12.3478C16.7351 10.6852 17.7767 9.02783 18.005 7.4293C18.2331 5.83285 17.734 4.75224 16.9659 4.05856C16.1767 3.34572 15.055 3 14 3C12.132 3 11.0924 4.08479 10.5177 4.68443C10.4581 4.7466 10.4035 4.80356 10.3535 4.85355C10.1583 5.04882 9.84169 5.04882 9.64643 4.85355C9.59644 4.80356 9.54185 4.7466 9.48227 4.68443C8.9076 4.08479 7.868 3 5.99999 3C4.94498 3 3.82328 3.34573 3.03399 4.05857ZM2.36374 3.31643C3.37372 2.40427 4.75205 2 5.99999 2C8.07126 2 9.34542 3.11257 9.99999 3.77862C10.6545 3.11257 11.9287 2 14 2C15.2479 2 16.6262 2.40428 17.6362 3.31644C18.6674 4.24776 19.2669 5.66715 18.995 7.5707C18.7233 9.47217 17.515 11.3148 15.9294 13.0272C14.3355 14.7486 12.3064 16.3952 10.3 17.9C10.1222 18.0333 9.87776 18.0333 9.69999 17.9C7.69356 16.3952 5.66446 14.7485 4.07063 13.0272C2.48506 11.3148 1.27668 9.47217 1.00501 7.57072C0.733043 5.66716 1.33253 4.24776 2.36374 3.31643Z"
-                                                  fill="black"/>
-                                        </svg>
-                                        <svg class="trashBin" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                             viewBox="0 0 20 20" fill="none">
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                  d="M2.5 5C2.5 4.72386 2.72386 4.5 3 4.5H17C17.2761 4.5 17.5 4.72386 17.5 5C17.5 5.27614 17.2761 5.5 17 5.5H3C2.72386 5.5 2.5 5.27614 2.5 5Z"
-                                                  fill="black"/>
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                  d="M3.4584 4.5H16.5059L15.6411 15.6926C15.5405 16.9947 14.4546 18 13.1486 18H6.84639C5.54299 18 4.45829 16.9986 4.35435 15.6994L3.4584 4.5ZM4.5416 5.5L5.35117 15.6196C5.41353 16.3992 6.06435 17 6.84639 17H13.1486C13.9322 17 14.5837 16.3968 14.6441 15.6155L15.4256 5.5H4.5416Z"
-                                                  fill="black"/>
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                  d="M13 5.5H7V3.46875C7 2.65758 7.65758 2 8.46875 2H11.5312C12.3424 2 13 2.65758 13 3.46875V5.5ZM8.46875 3C8.20987 3 8 3.20987 8 3.46875V4.5H12V3.46875C12 3.20987 11.7901 3 11.5312 3H8.46875Z"
-                                                  fill="black"/>
-                                        </svg>
-                                    </div>
-                                </div>
-                                <div class="price">
-                                    <div class="with-discount">
-                                        <span class="pencil-price">
-                                            <h3 class="item-price-with-discount">494</h3>
-                                            <h4>сом</h4>
-                                        </span>
-                                    </div>
-                                    <div class="without-discount">
-                                        <span class="pencil-price pencil-price-without-discount-hover"><span class="item-price-without-discount">950</span> сом</span>
-                                        <div class="item-discount pencil-discount-info">
-                                            <div class="discount-types">
-                                                <p>Скидка  <span class="amount-of-discount-on-item" id="item-2-discount">0</span>%</p>
-                                                <p>Скидка покупателя  <span class="personal-amount-of-discount">0</span>%</p>
-                                            </div>
-                                            <div class="discount-prices">
-                                                <p>−<span class="discount-price-on-item" id="item-2-discount-price">0</span> сом</p>
-                                                <p>−<span class="personal-discount-price">0</span> сом</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        отсутствуют
                     </div>
                 </div>
-                <div class="not-found-items">
-                    <div class="not-found-items-top-header">
-                        <p>Отсутствуют · 3 товара</p>
-                        <span class="arrow-collapse"></span>
-                    </div>
-                    <span class="line desktop-line"></span>
-                    <div class="items">
-                        <div class="item not-found-item">
-                            <span class="line mobile-line"></span>
-                            <div class="item-leftside">
-                                <div>
-                                    <div class="item-image TShirt-item not-found-item-image"></div>
-                                </div>
-                                <div class="item-description not-found-item-description">
-                                    <div>
-                                        <span class="description-text">
-                                            <div class="price-mobile-version">
-                                                <div class="with-discount"><p>522 сом</p></div>
-                                                <div class="without-discount"><span>1051 сом</span></div>
-                                            </div>
-                                            <p class="item-name not-found-item-name not-found-text-color">Футболка UZcotton мужская</p>
-                                            <p class="additional-item-info not-found-text-color">
-                                                <span class="item-color">Цвет: белый </span>
-                                                <span class="item-size">Размер: 56</span>
-                                            </p>
-                                        </span>
-                                    </div>
-                                    <div class="location not-found-item-location">
-                                        <p>Коледино WB</p>
-                                        <p class="organization-name">OOO Вайлдберриз</p>
-                                        <span><img src="src/images/assets/info.svg" alt="info"></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item-rightside">
-                                <div class="rightside-container">
-                                    <div class="item-icons not-found-item-icons">
-                                        <svg class="heart" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                             viewBox="0 0 20 20" fill="none">
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                  d="M3.03399 4.05857C2.26592 4.75224 1.76687 5.83284 1.99496 7.42928C2.22335 9.02783 3.26497 10.6852 4.80439 12.3478C6.25868 13.9184 8.10965 15.4437 9.99999 16.874C11.8903 15.4437 13.7413 13.9184 15.1956 12.3478C16.7351 10.6852 17.7767 9.02783 18.005 7.4293C18.2331 5.83285 17.734 4.75224 16.9659 4.05856C16.1767 3.34572 15.055 3 14 3C12.132 3 11.0924 4.08479 10.5177 4.68443C10.4581 4.7466 10.4035 4.80356 10.3535 4.85355C10.1583 5.04882 9.84169 5.04882 9.64643 4.85355C9.59644 4.80356 9.54185 4.7466 9.48227 4.68443C8.9076 4.08479 7.868 3 5.99999 3C4.94498 3 3.82328 3.34573 3.03399 4.05857ZM2.36374 3.31643C3.37372 2.40427 4.75205 2 5.99999 2C8.07126 2 9.34542 3.11257 9.99999 3.77862C10.6545 3.11257 11.9287 2 14 2C15.2479 2 16.6262 2.40428 17.6362 3.31644C18.6674 4.24776 19.2669 5.66715 18.995 7.5707C18.7233 9.47217 17.515 11.3148 15.9294 13.0272C14.3355 14.7486 12.3064 16.3952 10.3 17.9C10.1222 18.0333 9.87776 18.0333 9.69999 17.9C7.69356 16.3952 5.66446 14.7485 4.07063 13.0272C2.48506 11.3148 1.27668 9.47217 1.00501 7.57072C0.733043 5.66716 1.33253 4.24776 2.36374 3.31643Z"
-                                                  fill="black"/>
-                                        </svg>
-                                        <svg class="trashBin" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                             viewBox="0 0 20 20" fill="none">
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                  d="M2.5 5C2.5 4.72386 2.72386 4.5 3 4.5H17C17.2761 4.5 17.5 4.72386 17.5 5C17.5 5.27614 17.2761 5.5 17 5.5H3C2.72386 5.5 2.5 5.27614 2.5 5Z"
-                                                  fill="black"/>
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                  d="M3.4584 4.5H16.5059L15.6411 15.6926C15.5405 16.9947 14.4546 18 13.1486 18H6.84639C5.54299 18 4.45829 16.9986 4.35435 15.6994L3.4584 4.5ZM4.5416 5.5L5.35117 15.6196C5.41353 16.3992 6.06435 17 6.84639 17H13.1486C13.9322 17 14.5837 16.3968 14.6441 15.6155L15.4256 5.5H4.5416Z"
-                                                  fill="black"/>
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                  d="M13 5.5H7V3.46875C7 2.65758 7.65758 2 8.46875 2H11.5312C12.3424 2 13 2.65758 13 3.46875V5.5ZM8.46875 3C8.20987 3 8 3.20987 8 3.46875V4.5H12V3.46875C12 3.20987 11.7901 3 11.5312 3H8.46875Z"
-                                                  fill="black"/>
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item not-found-item">
-                            <span class="line mobile-line"></span>
-                            <div class="item-leftside">
-                                <div>
-                                    <div class="item-image mobileCase-item not-found-item-image"></div>
-                                </div>
-                                <div class="item-description not-found-item-description">
-                                    <div>
-                                        <span class="description-text">
-                                            <div class="price-mobile-version">
-                                                <div class="with-discount"><p>2 100 047 сом</p></div>
-                                                <div class="without-discount"><span>2 300 047 сом</span></div>
-                                            </div>
-                                            <p class="item-name not-found-item-name not-found-text-color">Силиконовый чехол картхолдер (отверстия) для карт, прозрачный кейс бампер на Apple iPhone XR, MobiSafe</p>
-                                            <p class="additional-item-info not-found-text-color"><span
-                                                    class="item-color">Цвет: прозрачный </span></p>
-                                        </span>
-                                    </div>
-                                    <div class="location not-found-item-location">
-                                        <p>Коледино WB</p>
-                                        <p class="organization-name">OOO Мегапрофстиль</p>
-                                        <span><img src="src/images/assets/info.svg" alt="info"></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item-rightside">
-                                <div class="rightside-container">
-                                    <div class="item-icons not-found-item-icons">
-                                        <svg class="heart" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                             viewBox="0 0 20 20" fill="none">
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                  d="M3.03399 4.05857C2.26592 4.75224 1.76687 5.83284 1.99496 7.42928C2.22335 9.02783 3.26497 10.6852 4.80439 12.3478C6.25868 13.9184 8.10965 15.4437 9.99999 16.874C11.8903 15.4437 13.7413 13.9184 15.1956 12.3478C16.7351 10.6852 17.7767 9.02783 18.005 7.4293C18.2331 5.83285 17.734 4.75224 16.9659 4.05856C16.1767 3.34572 15.055 3 14 3C12.132 3 11.0924 4.08479 10.5177 4.68443C10.4581 4.7466 10.4035 4.80356 10.3535 4.85355C10.1583 5.04882 9.84169 5.04882 9.64643 4.85355C9.59644 4.80356 9.54185 4.7466 9.48227 4.68443C8.9076 4.08479 7.868 3 5.99999 3C4.94498 3 3.82328 3.34573 3.03399 4.05857ZM2.36374 3.31643C3.37372 2.40427 4.75205 2 5.99999 2C8.07126 2 9.34542 3.11257 9.99999 3.77862C10.6545 3.11257 11.9287 2 14 2C15.2479 2 16.6262 2.40428 17.6362 3.31644C18.6674 4.24776 19.2669 5.66715 18.995 7.5707C18.7233 9.47217 17.515 11.3148 15.9294 13.0272C14.3355 14.7486 12.3064 16.3952 10.3 17.9C10.1222 18.0333 9.87776 18.0333 9.69999 17.9C7.69356 16.3952 5.66446 14.7485 4.07063 13.0272C2.48506 11.3148 1.27668 9.47217 1.00501 7.57072C0.733043 5.66716 1.33253 4.24776 2.36374 3.31643Z"
-                                                  fill="black"/>
-                                        </svg>
-                                        <svg class="trashBin" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                             viewBox="0 0 20 20" fill="none">
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                  d="M2.5 5C2.5 4.72386 2.72386 4.5 3 4.5H17C17.2761 4.5 17.5 4.72386 17.5 5C17.5 5.27614 17.2761 5.5 17 5.5H3C2.72386 5.5 2.5 5.27614 2.5 5Z"
-                                                  fill="black"/>
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                  d="M3.4584 4.5H16.5059L15.6411 15.6926C15.5405 16.9947 14.4546 18 13.1486 18H6.84639C5.54299 18 4.45829 16.9986 4.35435 15.6994L3.4584 4.5ZM4.5416 5.5L5.35117 15.6196C5.41353 16.3992 6.06435 17 6.84639 17H13.1486C13.9322 17 14.5837 16.3968 14.6441 15.6155L15.4256 5.5H4.5416Z"
-                                                  fill="black"/>
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                  d="M13 5.5H7V3.46875C7 2.65758 7.65758 2 8.46875 2H11.5312C12.3424 2 13 2.65758 13 3.46875V5.5ZM8.46875 3C8.20987 3 8 3.20987 8 3.46875V4.5H12V3.46875C12 3.20987 11.7901 3 11.5312 3H8.46875Z"
-                                                  fill="black"/>
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item not-found-item">
-                            <span class="line mobile-line"></span>
-                            <div class="item-leftside">
-                                <div>
-                                    <div class="item-image pencils-item not-found-item-image"></div>
-                                </div>
-                                <div class="item-description not-found-item-description">
-                                    <div>
-                                        <span class="description-text">
-                                            <div class="price-mobile-version">
-                                                <div class="with-discount"><p>494 сом</p></div>
-                                                <div class="without-discount"><span>950 сом</span></div>
-                                            </div>
-                                            <p class="item-name not-found-item-name not-found-text-color">Карандаши цветные Faber-Castell "Замок", набор 24 цвета, заточенные, шестигранные, Faber-Castell</p>
-                                        </span>
-                                    </div>
-                                    <div class="location not-found-item-location">
-                                        <p>Коледино WB</p>
-                                        <p class="organization-name">OOO Вайлдберриз</p>
-                                        <span><img src="src/images/assets/info.svg" alt="info"></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item-rightside">
-                                <div class="rightside-container">
-                                    <div class="item-icons not-found-item-icons">
-                                        <svg class="heart" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                             viewBox="0 0 20 20" fill="none">
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                  d="M3.03399 4.05857C2.26592 4.75224 1.76687 5.83284 1.99496 7.42928C2.22335 9.02783 3.26497 10.6852 4.80439 12.3478C6.25868 13.9184 8.10965 15.4437 9.99999 16.874C11.8903 15.4437 13.7413 13.9184 15.1956 12.3478C16.7351 10.6852 17.7767 9.02783 18.005 7.4293C18.2331 5.83285 17.734 4.75224 16.9659 4.05856C16.1767 3.34572 15.055 3 14 3C12.132 3 11.0924 4.08479 10.5177 4.68443C10.4581 4.7466 10.4035 4.80356 10.3535 4.85355C10.1583 5.04882 9.84169 5.04882 9.64643 4.85355C9.59644 4.80356 9.54185 4.7466 9.48227 4.68443C8.9076 4.08479 7.868 3 5.99999 3C4.94498 3 3.82328 3.34573 3.03399 4.05857ZM2.36374 3.31643C3.37372 2.40427 4.75205 2 5.99999 2C8.07126 2 9.34542 3.11257 9.99999 3.77862C10.6545 3.11257 11.9287 2 14 2C15.2479 2 16.6262 2.40428 17.6362 3.31644C18.6674 4.24776 19.2669 5.66715 18.995 7.5707C18.7233 9.47217 17.515 11.3148 15.9294 13.0272C14.3355 14.7486 12.3064 16.3952 10.3 17.9C10.1222 18.0333 9.87776 18.0333 9.69999 17.9C7.69356 16.3952 5.66446 14.7485 4.07063 13.0272C2.48506 11.3148 1.27668 9.47217 1.00501 7.57072C0.733043 5.66716 1.33253 4.24776 2.36374 3.31643Z"
-                                                  fill="black"/>
-                                        </svg>
-                                        <svg class="trashBin" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                             viewBox="0 0 20 20" fill="none">
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                  d="M2.5 5C2.5 4.72386 2.72386 4.5 3 4.5H17C17.2761 4.5 17.5 4.72386 17.5 5C17.5 5.27614 17.2761 5.5 17 5.5H3C2.72386 5.5 2.5 5.27614 2.5 5Z"
-                                                  fill="black"/>
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                  d="M3.4584 4.5H16.5059L15.6411 15.6926C15.5405 16.9947 14.4546 18 13.1486 18H6.84639C5.54299 18 4.45829 16.9986 4.35435 15.6994L3.4584 4.5ZM4.5416 5.5L5.35117 15.6196C5.41353 16.3992 6.06435 17 6.84639 17H13.1486C13.9322 17 14.5837 16.3968 14.6441 15.6155L15.4256 5.5H4.5416Z"
-                                                  fill="black"/>
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                  d="M13 5.5H7V3.46875C7 2.65758 7.65758 2 8.46875 2H11.5312C12.3424 2 13 2.65758 13 3.46875V5.5ZM8.46875 3C8.20987 3 8 3.20987 8 3.46875V4.5H12V3.46875C12 3.20987 11.7901 3 11.5312 3H8.46875Z"
-                                                  fill="black"/>
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    отсутствуют
-                </div>
-            </div>
-            <div class="delivery-method">
-                <div class="white-block-container white-block-container-mobile-version">
-                    <div class="delivery-title">
-                        <h2>Способ доставки</h2>
-                        <span class="edit-word">Изменить</span>
-                    </div>
-                    <div class="delivery-method-details">
-                        <div class="place-taken-container">
-                            <p class="place-taken-title">Пункт выдачи</p>
-                            <div class="place-taken">
-                                <p class="place-taken-adress">Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
-                                <div class="place-taken-additional-info">
-                                    <div class="place-taken-rating">
-                                        <img src="src/images/assets/star_fill.svg" alt="star"><span>4.99</span>
-                                    </div>
-                                    <p class="place-taken-work-time">Ежедневно с 10 до 21</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="delivery-price-container">
-                            <p class="delivery-price-title">Стоимость доставки</p>
-                            <div>
-                                <p class="delivery-actual-price">Бесплатно</p>
-                            </div>
-                        </div>
-                        <div class="closest-delivery-date">
-                            <p class="closest-delivery-date-title">5—6 февраля</p>
-                            <div class="ready-to-deliver-items">
-                                <div class="TShirt-item" id="TShirt-item-0-small"> <!-- '0' is item's id -->
-                                    <div class="red-circle-number"><span class="">1</span></div>
-                                </div>
-                                <div class="mobileCase-item" id="mobileCase-item-1-small"> <!-- '1' is item's id -->
-                                    <div class="red-circle-number"><span class="">184</span></div>
-                                </div>
-                                <div class="pencils-item" id="pencil-item-2-small"> <!-- '2' is item's id -->
-                                    <div class="red-circle-number"><span class="">2</span></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="another-delivery-date">
-                            <p class="another-delivery-date-title">7—8 февраля</p>
-                            <div class="ready-to-deliver-items">
-                                <div class="TShirt-item" id="delivery-late-day-item-0-small"> <!-- '0' is item's id -->
-                                    <div class="red-circle-number"><span class="">0</span></div>
-                                </div>
-                                <div class="mobileCase-item" id="delivery-late-day-item-1-small">
-                                    <div class="red-circle-number"><span class="">16</span></div>
-                                </div>
-                                <div class="pencils-item" id="delivery-late-day-item-2-small"> <!-- '2' is item's id -->
-                                    <div class="red-circle-number"><span class="">0</span></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="delivery-confirmed">
-                        <img src="src/images/assets/price_shipping.svg" alt="price_shipping">
-                        <div class="confirmed-info">
-                            Обратная доставка товаров на склад при отказе —   
-                            <div class="free">
-                                <p class="free-green-word">бесплатно</p>
-                                <div class="free-pop-up">
-                                    <p>Если товары вам не подойдут, мы вернем их обратно на склад — это бесплатно</p>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-            <div class="payment-method">
-                <div class="white-block-container white-block-container-mobile-version">
-                    <div class="payment-method-main-info">
-                        <div class="payment-method-title">
-                            <h2>Способ оплаты</h2>
+                <div class="delivery-method">
+                    <div class="white-block-container white-block-container-mobile-version">
+                        <div class="delivery-title">
+                            <h2>Способ доставки</h2>
                             <span class="edit-word">Изменить</span>
                         </div>
-                        <div class="card-info">
-                            <div class="card-background"><img src="src/images/assets/mir.svg" alt="mir"></div>
-                            <p class="card-number">1234 12•• •••• 1234</p>
-                            <p class="card-expire-date">01/30</p>
-                        </div>
-                    </div>
-                    <div class="payment-method-additional-info">
-                        <p>Спишем оплату с карты при получении</p>
-                    </div>
-                </div>
-            </div>
-            <div class="customer-data">
-                <div class="white-block-container white-block-container-mobile-version">
-                    <div class="customer-title">
-                        <h2>Получатель</h2>
-                    </div>
-                    <form class="customer-form" id="form">
-                        <div class="customer-form-top">
-                            <div class="name">
-                                <input type="text" placeholder="Имя" id="name" class="form-input">
-                                <span class="customer-form-error" id="name-error"></span>
-                            </div>
-                            <div class="family-name">
-                                <input type="text" placeholder="Фамилия" id="familyName" class="form-input">
-                                <span class="customer-form-error" id="familyName-error"></span>
-                            </div>
-                        </div>
-                        <div class="customer-form-bottom">
-                            <div class="email">
-                                <input type="email" placeholder="Почта" id="email" class="form-input">
-                                <span class="customer-form-error" id="email-error"></span>
-                            </div>
-                            <div class="tel-number">
-                                <input type="text" placeholder="Телефон" value="+7 (988) 123-45-67" id="telNumber"
-                                       class="form-input">
-                                <span class="customer-form-error" id="telNumber-error"></span>
-                            </div>
-                            <div class="enn">
-                                <input type="text" placeholder="ИНН" id="enn" class="form-input">
-                                <span class="customer-form-error" id="enn-error">Для таможенного оформления</span>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </main>
-        <div class="content-right-block content-padding-container-mobile-version">
-            <div class="total-info-about-order">
-                <div class="order-totals">
-                    <div class="total-price">
-                        <h2>Итого</h2>
-                        <div>
-                            <h2 id="total-price-with-discount">0</h2>
-                            <h3>  сом</h3>
-                        </div>
-                    </div>
-                    <div class="about-total-order">
-                        <div class="total-items">
-                            <p><span id="total-items">0</span> товара</p>
-                            <p><span id="total-price-without-discount">0</span> сом</p>
-                        </div>
-                        <div class="total-discount">
-                            <p>Скидка</p>
-                            <p>−<span id="total-discount">0</span> сом</p>
-                        </div>
-                        <div class="total-delivery-price">
-                            <p>Доставка</p>
-                            <p>Бесплатно</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="pick-up-point">
-                    <div class="pick-up">
-                        <div class="pick-up-title">
-                            <h4>Доставка в пункт выдачи</h4>
-                            <img src="src/images/assets/edit-icon.svg" alt="edit">
-                        </div>
-                        <p class="pick-up-adress">Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
-                        <p class="pick-up-date">5–8 фев</p>
-                    </div>
-                    <div class="delivery-confirmed">
-                        <img src="src/images/assets/price_shipping.svg" alt="price_shipping">
-                        <div class="confirmed-info">
-                            Обратная доставка товаров на склад при отказе —   
-                            <div class="free">
-                                <p class="free-green-word">бесплатно</p>
-                                <div class="free-pop-up">
-                                    <p>Если товары вам не подойдут, мы вернем их обратно на склад — это бесплатно</p>
+                        <div class="delivery-method-details">
+                            <div class="place-taken-container">
+                                <p class="place-taken-title">Пункт выдачи</p>
+                                <div class="place-taken">
+                                    <p class="place-taken-adress">Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
+                                    <div class="place-taken-additional-info">
+                                        <div class="place-taken-rating">
+                                            <img src="src/images/assets/star_fill.svg" alt="star"><span>4.99</span>
+                                        </div>
+                                        <p class="place-taken-work-time">Ежедневно с 10 до 21</p>
+                                    </div>
                                 </div>
                             </div>
-                            <!--                            </p>-->
+                            <div class="delivery-price-container">
+                                <p class="delivery-price-title">Стоимость доставки</p>
+                                <div>
+                                    <p class="delivery-actual-price">Бесплатно</p>
+                                </div>
+                            </div>
+                            <div class="closest-delivery-date">
+                                <p class="closest-delivery-date-title">5—6 февраля</p>
+                                <div class="ready-to-deliver-items">
+                                    <div class="TShirt-item" id="TShirt-item-0-small"> <!-- '0' is item's id -->
+                                        <div class="red-circle-number"><span class="">1</span></div>
+                                    </div>
+                                    <div class="mobileCase-item" id="mobileCase-item-1-small"> <!-- '1' is item's id -->
+                                        <div class="red-circle-number"><span class="">184</span></div>
+                                    </div>
+                                    <div class="pencils-item" id="pencil-item-2-small"> <!-- '2' is item's id -->
+                                        <div class="red-circle-number"><span class="">2</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="another-delivery-date">
+                                <p class="another-delivery-date-title">7—8 февраля</p>
+                                <div class="ready-to-deliver-items">
+                                    <div class="TShirt-item" id="delivery-late-day-item-0-small">
+                                        <!-- '0' is item's id -->
+                                        <div class="red-circle-number"><span class="">0</span></div>
+                                    </div>
+                                    <div class="mobileCase-item" id="delivery-late-day-item-1-small">
+                                        <div class="red-circle-number"><span class="">16</span></div>
+                                    </div>
+                                    <div class="pencils-item" id="delivery-late-day-item-2-small">
+                                        <!-- '2' is item's id -->
+                                        <div class="red-circle-number"><span class="">0</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="delivery-confirmed">
+                            <img src="src/images/assets/price_shipping.svg" alt="price_shipping">
+                            <div class="confirmed-info">
+                                Обратная доставка товаров на склад при отказе —   
+                                <div class="free">
+                                    <p class="free-green-word">бесплатно</p>
+                                    <div class="free-pop-up">
+                                        <p>Если товары вам не подойдут, мы вернем их обратно на склад — это
+                                            бесплатно</p>
+                                    </div>
+                                </div>
+
+                            </div>
+
                         </div>
                     </div>
                 </div>
-                <div class="content-right-payment-method">
-                    <div class="content-right-payment-info">
-                        <div class="content-right-payment-info-title">
-                            <h4>Оплата картой</h4>
-                            <img src="src/images/assets/edit-icon.svg" alt="edit">
+                <div class="payment-method">
+                    <div class="white-block-container white-block-container-mobile-version">
+                        <div class="payment-method-main-info">
+                            <div class="payment-method-title">
+                                <h2>Способ оплаты</h2>
+                                <span class="edit-word payment-method-edit">Изменить</span>
+                            </div>
+                            <div class="card-info">
+                                <div class="card-background">
+                                    <span class="card-mir-icon"></span>
+                                </div>
+                                <p class="card-number">1234 12•• •••• 1234</p>
+                                <p class="card-expire-date">01/30</p>
+                            </div>
                         </div>
-                        <div class="card-info">
-                            <div class="card-background"><img src="src/images/assets/mir.svg" alt="mir"></div>
-                            <p>1234 12•• •••• 1234</p>
+                        <div class="payment-method-additional-info">
+                            <p>Спишем оплату с карты при получении</p>
                         </div>
-                    </div>
-                    <div class="pay-right-away-container">
-                        <div>
-                            <input type="checkbox" id="pay-instantly" class="select-input">
-                            <label for="pay-instantly" class="select-checkbox">Списать оплату сразу</label>
-                        </div>
-                        <p id="pay-right-away-notice">Спишем оплату с карты при получении</p>
                     </div>
                 </div>
-            </div>
-            <div class="order">
-                <a href="" id="submit">Заказать</a>
-            </div>
-            <div class="private-policy-agreement">
-                <div class="checkmark"></div>
-                <p>Соглашаюсь с правилами пользования торговой площадкой и возврата</p>
+                <div class="customer-data">
+                    <div class="white-block-container white-block-container-mobile-version">
+                        <div class="customer-title">
+                            <h2>Получатель</h2>
+                        </div>
+                        <form class="customer-form" id="form">
+                            <div class="customer-form-top">
+                                <div class="name">
+                                    <input type="text" placeholder="Имя" id="name" class="form-input">
+                                    <span class="customer-form-error" id="name-error"></span>
+                                </div>
+                                <div class="family-name">
+                                    <input type="text" placeholder="Фамилия" id="familyName" class="form-input">
+                                    <span class="customer-form-error" id="familyName-error"></span>
+                                </div>
+                            </div>
+                            <div class="customer-form-bottom">
+                                <div class="email">
+                                    <input type="email" placeholder="Почта" id="email" class="form-input">
+                                    <span class="customer-form-error" id="email-error"></span>
+                                </div>
+                                <div class="tel-number">
+                                    <input type="text" placeholder="Телефон" value="+7 (988) 123-45-67" id="telNumber"
+                                           class="form-input">
+                                    <span class="customer-form-error" id="telNumber-error"></span>
+                                </div>
+                                <div class="enn">
+                                    <input type="text" placeholder="ИНН" id="enn" class="form-input">
+                                    <span class="customer-form-error" id="enn-error">Для таможенного оформления</span>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </main>
+            <div class="content-right-block content-padding-container-mobile-version">
+                <div class="total-info-about-order">
+                    <div class="order-totals">
+                        <div class="total-price">
+                            <h2>Итого</h2>
+                            <div>
+                                <h2 id="total-price-with-discount">0</h2>
+                                <h3>  сом</h3>
+                            </div>
+                        </div>
+                        <div class="about-total-order">
+                            <div class="total-items">
+                                <p><span id="total-items">0</span> товара</p>
+                                <p><span id="total-price-without-discount">0</span> сом</p>
+                            </div>
+                            <div class="total-discount">
+                                <p>Скидка</p>
+                                <p>−<span id="total-discount">0</span> сом</p>
+                            </div>
+                            <div class="total-delivery-price">
+                                <p>Доставка</p>
+                                <p>Бесплатно</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pick-up-point">
+                        <div class="pick-up">
+                            <div class="pick-up-title">
+                                <h4>Доставка в пункт выдачи</h4>
+                                <img src="src/images/assets/edit-icon.svg" alt="edit">
+                            </div>
+                            <p class="pick-up-adress">Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
+                            <p class="pick-up-date">5–8 фев</p>
+                        </div>
+                        <div class="delivery-confirmed">
+                            <img src="src/images/assets/price_shipping.svg" alt="price_shipping">
+                            <div class="confirmed-info">
+                                Обратная доставка товаров на склад при отказе —   
+                                <div class="free">
+                                    <p class="free-green-word">бесплатно</p>
+                                    <div class="free-pop-up">
+                                        <p>Если товары вам не подойдут, мы вернем их обратно на склад — это
+                                            бесплатно</p>
+                                    </div>
+                                </div>
+                                <!--                            </p>-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-right-payment-method">
+                        <div class="content-right-payment-info">
+                            <div class="content-right-payment-info-title">
+                                <h4>Оплата картой</h4>
+                                <img class="payment-method-edit" src="src/images/assets/edit-icon.svg" alt="edit">
+                            </div>
+                            <div class="card-info">
+                                <div class="card-background">
+                                    <span class="card-mir-icon"></span>
+                                </div>
+                                <p>1234 12•• •••• 1234</p>
+                            </div>
+                        </div>
+                        <div class="pay-right-away-container">
+                            <div>
+                                <input type="checkbox" id="pay-instantly" class="select-input">
+                                <label for="pay-instantly" class="select-checkbox">Списать оплату сразу</label>
+                            </div>
+                            <p id="pay-right-away-notice">Спишем оплату с карты при получении</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="order">
+                    <a href="" id="submit">Заказать</a>
+                </div>
+                <div class="private-policy-agreement">
+                    <div class="checkmark"></div>
+                    <p>Соглашаюсь с правилами пользования торговой площадкой и возврата</p>
+                </div>
             </div>
         </div>
-    </div>
+        <div class="modals">
+            <div class="delivery-method-modal">
+
+            </div>
+            <div class="payment-method-modal">
+                <div class="cards-container">
+                    <ul class="cards-list">
+                        <li class="card-item">
+                            <input type="radio" id="card-mir" name="cards">
+                            <label for="card-mir" class="card-info-label">
+                                <div class="card-background">
+                                    <span class="card-mir-icon"></span>
+                                </div>
+                                <p class="card-number card-number-mir">1234 56•• •••• 1234</p>
+                            </label>
+                        </li>
+                        <li class="card-item">
+                            <input type="radio" id="card-visa" name="cards">
+                            <label for="card-visa" class="card-info-label">
+                                <div class="card-background">
+                                    <span class="card-visa-icon"></span>
+                                </div>
+                                <p class="card-number card-number-visa">1234 56•• •••• 1234</p>
+                            </label>
+                        </li>
+                        <li class="card-item">
+                            <input type="radio" id="card-mastercard" name="cards">
+                            <label for="card-mastercard" class="card-info-label">
+                                <div class="card-background">
+                                    <span class="card-mastercard-icon"></span>
+                                </div>
+                                <p class="card-number card-number-mastercard">1234 56•• •••• 1234</p>
+                            </label>
+                        </li>
+                        <li class="card-item">
+                            <input type="radio" id="card-maestro" name="cards">
+                            <label for="card-maestro" class="card-info-label">
+                                <div class="card-background">
+                                    <span class="card-maestro-icon"></span>
+                                </div>
+                                <p class="card-number card-number-maestro">1234 56•• •••• 1234</p>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="payment-method-modal-title-container">
+                    <h3 class="payment-method-modal-title-text">Способ оплаты</h3>
+                    <span class="payment-method-modal-title-close"></span>
+                </div>
+                <div class="choose-card-button-container">
+                    <div class="choose-card-button-wrapper">
+                        <h4 class="choose-card-button">Выбрать</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <footer>
         <div class="footer-main">
             <div class="footer-container">
-            <p class="company-name">© 2022 ООО «Товары и точка»</p>
-        </div>
+                <p class="company-name">© 2022 ООО «Товары и точка»</p>
+            </div>
         </div>
     </footer>
 </div>
