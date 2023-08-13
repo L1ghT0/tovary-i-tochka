@@ -30,6 +30,9 @@ export function unfreezeHTML(){
     turnBackgroundOff('');
 }
 
+
+
+
 function _bodyScrollControl(marginSize){
     if (marginSize) {
         _html.style.marginRight = marginSize + "px";

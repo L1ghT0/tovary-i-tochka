@@ -33,7 +33,7 @@ document.querySelectorAll('.payment-method-edit').forEach(edit => {
 })
 
 // click event to close payment-method-modal
-document.querySelector('.payment-method-modal-title-close').addEventListener('click', (e) => {
+document.querySelector('.close-payment-modal').addEventListener('click', (e) => {
     closePaymentModal();
 })
 
@@ -41,7 +41,7 @@ document.querySelector('.payment-method-modal-title-close').addEventListener('cl
 // click event to set selected card
 // We don't have, contain and process the data of cards yet.
 // this event only changes and sets the image in html-element directly
-document.querySelector('.choose-card-button').addEventListener('click', (e) => {
+document.querySelector('.payment-method-modal .choose-button').addEventListener('click', (e) => {
     let selectedCard = Array.prototype.slice.call(document.querySelectorAll('.card-item input')).filter(item => item.checked);
     document.querySelectorAll('.card-info .card-background span').forEach(card => {
         card.classList.remove(`${card.className}`);

@@ -2059,10 +2059,170 @@ label{
     z-index: 900;
     background: rgba(5, 0, 10, 0.30);
 }
+/*Delivery-method-modal START--------------------------------------------------------->*/
 
 .delivery-method-modal{
+    position: absolute;
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;;
+    box-sizing: border-box;
+    border-radius: 16px;
+    background: #FFF;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.20);
+
+}
+
+.delivery-method-modal-choose-method-container{
+    display: flex;
+    margin-bottom: 24px;
+    width: 100%;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 0 22px;
+    gap: 8px;
+}
+.delivery-method-modal-choose-method-container input{
     display: none;
 }
+
+.delivery-method-modal .pick-up-addresses{
+    display: none;
+}
+.delivery-method-modal  .customer-addresses {
+    display: none;
+}
+
+.delivery-method-modal-choose-method-container label{
+    width: 100%;
+    border-radius: 20px;
+    border: 2px solid rgba(203, 17, 171, 0.15);
+    background: #FFF;
+    box-sizing: border-box;
+}
+.choose-method-button-label:first-child{
+
+}
+
+.choose-method-button-wrapper{
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+}
+.delivery-method-modal-choose-method-container input:checked + label{
+    border: 2px solid #CB11AB;
+}
+
+.choose-method-button{
+    display: inline-block;
+    color: #000;
+    /* Сайт/Подпись bold */
+    font-family: Segoe UI;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px; /* 123.077% */
+    padding: 9px 0px 11px 0px;
+}
+.delivery-addresses{
+    padding: 0 22px 33px 22px;
+    display: flex;
+    flex-direction: column;
+}
+.delivery-addresses-title-container{
+    margin-bottom: 8px;
+}
+.delivery-addresses-title{
+    margin-top: 2px;
+
+    color: #000;
+    /* Сайт/Подпись bold */
+    font-family: Segoe UI;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px; /* 123.077% */
+}
+
+.address-item input{
+    display: none;
+
+}
+.address-items {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.address-item{
+    position: relative;
+    margin-top: 4px;
+    margin-bottom: 8px;
+}
+.address-item:last-child{
+}
+.address-text{
+    color: #000;
+    /* Сайт/Текст */
+    font-family: Segoe UI;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+    max-width: 400px;
+
+}
+.address-item-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    box-sizing: border-box;
+}
+
+
+.address-item .address-label:before{
+    /*top: 10px;*/
+}
+.address-item .address-label:after{
+    /*top: 10px;*/
+}
+
+.pick-up-rating{
+    display: block;
+    margin-left: 28px;
+    margin-top: 4px;
+}
+
+
+.pick-up-rating-number{
+    color: #000;
+    /* Сайт/Подпись */
+    font-family: Segoe UI;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px; /* 123.077% */
+    margin-left: 4px;
+}
+
+.pick-up-rating p{
+    margin-left: 8px;
+    display: inline-block;
+     color: #A0A0A4;
+     /* Сайт/Подпись */
+     font-family: Segoe UI;
+     font-size: 13px;
+     font-style: normal;
+     font-weight: 400;
+     line-height: 16px; /* 123.077% */
+ }
+
+/*Delivery-method-modal END<---------------------------------------------------------*/
+
+/*Payment-method-modal START--------------------------------------------------------->*/
+
 .payment-method-modal{
     position: absolute;
     display: none;
@@ -2098,7 +2258,7 @@ label{
     margin-bottom: 0px;
 }
 
-
+.address-item input:checked+ .address-item-wrapper>.address-label:before,
 .card-item input:checked+ .card-info-label:before{
     content: '';
     display: block;
@@ -2112,7 +2272,7 @@ label{
     border: none;
     border-radius: 10px;
 }
-
+.address-item input:checked+ .address-item-wrapper>.address-label:after,
 .card-item input:checked+.card-info-label:after{
     content: '';
     top: 10px;
@@ -2125,7 +2285,7 @@ label{
     background-color: rgba(255, 255, 255, 1);
     border-radius: 10px;
 }
-
+.address-label:before,
 .card-info-label:before{
     content: '';
     display: block;
@@ -2139,7 +2299,7 @@ label{
     border: 1px rgba(0, 0, 0, 0.2) solid;
     border-radius: 10px;
 }
-
+.address-label:after,
 .card-info-label:after{
     content: '';
     top: 10px;
@@ -2152,6 +2312,7 @@ label{
     background-color: rgba(255, 255, 255, 1);
     border-radius: 10px;
 }
+.address-label,
 .card-info-label{
     display: flex;
     margin-left: 28px;
@@ -2195,12 +2356,14 @@ label{
     background-image: url("src/images/cards/maestro.svg");
     background-repeat: no-repeat;
 }
+.delivery-method-modal-title-container,
 .payment-method-modal-title-container{
     padding: 16px 24px 13px 24px;
     display: flex;
     justify-content: space-between;
     align-items: end;
 }
+.delivery-method-modal-title-text,
 .payment-method-modal-title-text{
     color: #000;
     /* Сайт/Н3-new */
@@ -2212,13 +2375,13 @@ label{
     letter-spacing: -0.2px;
 }
 
-.payment-method-modal-title-close{
+.modal-close{
     width: 24px;
     height: 24px;
     position: relative;
     cursor: pointer;
 }
-.payment-method-modal-title-close:before{
+.modal-close:before{
     width: 16px;
     content: '';
     display: block;
@@ -2233,7 +2396,7 @@ label{
     -ms-transform: rotate(-45deg);
     transform: rotate(-45deg);
 }
-.payment-method-modal-title-close:after{
+.modal-close:after{
     width: 16px;
     content: '';
     position: absolute;
@@ -2251,12 +2414,12 @@ label{
 
 
 
-.choose-card-button-container{
+.choose-button-container{
     /*height: 84px;*/
     /*width: 400px;*/
     padding: 16px 24px 24px 24px;
 }
-.choose-card-button-wrapper{
+.choose-button-wrapper{
     border-radius: 8px;
     background: #CB11AB;
     /* Тень в прокрутке */
@@ -2265,7 +2428,7 @@ label{
     max-width: 164px;
     cursor: pointer;
 }
-.choose-card-button{
+.choose-button{
     color: #FFF;
     padding: 7.5px 48px 12.5px 48px;
     width: fit-content;
@@ -2278,8 +2441,9 @@ label{
     font-weight: 700;
     line-height: 24px; /* 150% */
 }
-/*Modals MEDIA--------------------------------------------------------->*/
 
+/*Payment-method-modal END<---------------------------------------------------------*/
+/*Modals MEDIA--------------------------------------------------------->*/
 
 @media screen and (max-width: 480px){
 
@@ -2303,9 +2467,28 @@ label{
         z-index: 900;
         background: rgba(5, 0, 10, 0.30);
     }
-    .delivery-method-modal{
+
+    .delivery-addresses{
+        padding: 0;
     }
 
+    .address-text{
+        max-width: 236px;
+    }
+    .delivery-method-modal-choose-method-container{
+        padding: 0;
+    }
+
+    .delivery-method-modal .pick-up-point{
+        margin-right: 8px;
+    }
+
+
+    .delivery-method-modal-title-text,
+    .payment-method-modal-title-text{
+        font-weight: 600;
+    }
+    .delivery-method-modal,
     .payment-method-modal{
         position: absolute;
         display: none;
@@ -2322,30 +2505,36 @@ label{
         background: #FFF;
         box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.20);
     }
+
+    .delivery-method-modal-title-container,
     .payment-method-modal-title-container{
         grid-area: title;
         height: fit-content;
         padding: 16px 11px 13px 16px;
-    }
+        background: #FFF;
 
+    }
+    .delivery-method-modal-content-container,
     .cards-container{
         grid-area: cards;
         height: 100%;
         padding: 0 16px;
+        background: #FFF;
+
     }
 
-
-
-    .choose-card-button-container{
+    .choose-button-container{
         grid-area: submit;
         margin-top: auto;
         padding: 16px;
+        background: #FFF;
+
     }
-    .choose-card-button-wrapper{
+    .choose-button-wrapper{
         width: 100%;
         min-width: 100%;
     }
-    .choose-card-button{
+    .choose-button{
         width: 100%;
         min-width: 100%;
     }
@@ -2354,13 +2543,10 @@ label{
 
 /*Modals END<---------------------------------------------------------*/
 
-
-
-
+/*To freeze html when modal is opened*/
 .hystmodal__opened {
     position: fixed;
     right: 0;
     left: 0;
     overflow: hidden;
-
 }

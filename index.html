@@ -533,7 +533,7 @@
                     <div class="white-block-container white-block-container-mobile-version">
                         <div class="delivery-title">
                             <h2>Способ доставки</h2>
-                            <span class="edit-word">Изменить</span>
+                            <span class="edit-word delivery-method-edit">Изменить</span>
                         </div>
                         <div class="delivery-method-details">
                             <div class="place-taken-container">
@@ -686,7 +686,7 @@
                         <div class="pick-up">
                             <div class="pick-up-title">
                                 <h4>Доставка в пункт выдачи</h4>
-                                <img src="src/images/assets/edit-icon.svg" alt="edit">
+                                <img class="delivery-method-edit" src="src/images/assets/edit-icon.svg" alt="edit">
                             </div>
                             <p class="pick-up-adress">Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
                             <p class="pick-up-date">5–8 фев</p>
@@ -739,7 +739,192 @@
         </div>
         <div class="modals">
             <div class="delivery-method-modal">
+                <div class="delivery-method-modal-title-container">
+                    <h3 class="delivery-method-modal-title-text">Способ доставки</h3>
+                    <span class="modal-close close-delivery-modal"></span>
+                </div>
+                <div class="delivery-method-modal-content-container">
+                    <div class="delivery-method-modal-choose-method-container">
+                        <input type="radio" id="pick-up-point" name="delivery-method">
+                        <label for="pick-up-point">
+                            <div class="choose-method-button-wrapper">
+                                <p class="choose-method-button">В пункт выдачи</p>
+                            </div>
+                        </label>
+                        <input type="radio" id="courier" name="delivery-method" checked="checked">
+                        <label for="courier">
+                            <div class="choose-method-button-wrapper">
+                                <p class="choose-method-button">Курьером</p>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="delivery-addresses pick-up-addresses">
+                        <div class="delivery-addresses-title-container">
+                            <p class="delivery-addresses-title">Мои адреса</p>
+                        </div>
+                        <div>
+                            <ul class="address-items pick-up-address-items">
+                                <li class="address-item pick-up-address-item">
+                                    <input type="radio" id="pick-up-address-0" name="pick-up-addresses">
+                                    <div class="address-item-wrapper">
+                                        <label for="pick-up-address-0" class="address-label">
+                                            <p class="address-text">г. Бишкек, микрорайон Джал, улица Ахунбаева Исы, д. 67/1</p>
+                                        </label>
+                                        <svg class="trashBin" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                             viewBox="0 0 20 20" fill="none">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                  d="M2.5 5C2.5 4.72386 2.72386 4.5 3 4.5H17C17.2761 4.5 17.5 4.72386 17.5 5C17.5 5.27614 17.2761 5.5 17 5.5H3C2.72386 5.5 2.5 5.27614 2.5 5Z"
+                                                  fill="#A0A0A4"/>
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                  d="M3.4584 4.5H16.5059L15.6411 15.6926C15.5405 16.9947 14.4546 18 13.1486 18H6.84639C5.54299 18 4.45829 16.9986 4.35435 15.6994L3.4584 4.5ZM4.5416 5.5L5.35117 15.6196C5.41353 16.3992 6.06435 17 6.84639 17H13.1486C13.9322 17 14.5837 16.3968 14.6441 15.6155L15.4256 5.5H4.5416Z"
+                                                  fill="#A0A0A4"/>
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                  d="M13 5.5H7V3.46875C7 2.65758 7.65758 2 8.46875 2H11.5312C12.3424 2 13 2.65758 13 3.46875V5.5ZM8.46875 3C8.20987 3 8 3.20987 8 3.46875V4.5H12V3.46875C12 3.20987 11.7901 3 11.5312 3H8.46875Z"
+                                                  fill="#A0A0A4"/>
+                                        </svg>
+                                    </div>
+                                    <span class="pick-up-rating">
+                                        <svg class="star" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.69769 1.14922C6.43817 0.528396 5.56198 0.528387 5.30244 1.14919L6.69769 1.14922ZM5.30244 1.14919L4.14719 3.90977L1.19202 4.16613C0.519264 4.22467 0.262282 5.05966 0.759713 5.49464L3.00514 7.45915L2.33207 10.3824C2.18436 11.0238 2.87792 11.5567 3.46133 11.2023L6.00032 9.65611L8.53797 11.2015C9.12269 11.5588 9.81568 11.0227 9.66861 10.3826L8.99549 7.45915L11.2402 5.49537C11.7385 5.05961 11.4793 4.22519 10.8083 4.16667L7.85294 3.91029L6.69769 1.14922" fill="#FF970D"/>
+                                        </svg>
+                                        <span class="pick-up-rating-number">4.99</span>
+                                        <p>Пункт выдачи</p>
+                                    </span>
+                                </li>
+                                <li class="address-item pick-up-address-item">
+                                    <input type="radio" id="pick-up-address-1" name="pick-up-addresses">
+                                    <div class="address-item-wrapper">
+                                        <label for="pick-up-address-1" class="address-label">
+                                            <p class="address-text">г. Бишкек, микрорайон Джал, улица Ахунбаева Исы, д. 67/1</p>
+                                        </label>
+                                        <svg class="trashBin" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                             viewBox="0 0 20 20" fill="none">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                  d="M2.5 5C2.5 4.72386 2.72386 4.5 3 4.5H17C17.2761 4.5 17.5 4.72386 17.5 5C17.5 5.27614 17.2761 5.5 17 5.5H3C2.72386 5.5 2.5 5.27614 2.5 5Z"
+                                                  fill="#A0A0A4"/>
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                  d="M3.4584 4.5H16.5059L15.6411 15.6926C15.5405 16.9947 14.4546 18 13.1486 18H6.84639C5.54299 18 4.45829 16.9986 4.35435 15.6994L3.4584 4.5ZM4.5416 5.5L5.35117 15.6196C5.41353 16.3992 6.06435 17 6.84639 17H13.1486C13.9322 17 14.5837 16.3968 14.6441 15.6155L15.4256 5.5H4.5416Z"
+                                                  fill="#A0A0A4"/>
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                  d="M13 5.5H7V3.46875C7 2.65758 7.65758 2 8.46875 2H11.5312C12.3424 2 13 2.65758 13 3.46875V5.5ZM8.46875 3C8.20987 3 8 3.20987 8 3.46875V4.5H12V3.46875C12 3.20987 11.7901 3 11.5312 3H8.46875Z"
+                                                  fill="#A0A0A4"/>
+                                        </svg>
+                                    </div>
+                                    <span class="pick-up-rating">
+                                        <svg class="star" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.69769 1.14922C6.43817 0.528396 5.56198 0.528387 5.30244 1.14919L6.69769 1.14922ZM5.30244 1.14919L4.14719 3.90977L1.19202 4.16613C0.519264 4.22467 0.262282 5.05966 0.759713 5.49464L3.00514 7.45915L2.33207 10.3824C2.18436 11.0238 2.87792 11.5567 3.46133 11.2023L6.00032 9.65611L8.53797 11.2015C9.12269 11.5588 9.81568 11.0227 9.66861 10.3826L8.99549 7.45915L11.2402 5.49537C11.7385 5.05961 11.4793 4.22519 10.8083 4.16667L7.85294 3.91029L6.69769 1.14922" fill="#FF970D"/>
+                                        </svg>
+                                        <span class="pick-up-rating-number">4.99</span>
+                                        <p>Пункт выдачи</p>
+                                    </span>
+                                </li>
+                                <li class="address-item pick-up-address-item">
+                                    <input type="radio" id="pick-up-address-2" name="pick-up-addresses">
+                                    <div class="address-item-wrapper">
+                                        <label for="pick-up-address-2" class="address-label">
+                                            <p class="address-text">г. Бишкек, улица Табышалиева, д. 57</p>
+                                        </label>
+                                        <svg class="trashBin" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                             viewBox="0 0 20 20" fill="none">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                  d="M2.5 5C2.5 4.72386 2.72386 4.5 3 4.5H17C17.2761 4.5 17.5 4.72386 17.5 5C17.5 5.27614 17.2761 5.5 17 5.5H3C2.72386 5.5 2.5 5.27614 2.5 5Z"
+                                                  fill="#A0A0A4"/>
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                  d="M3.4584 4.5H16.5059L15.6411 15.6926C15.5405 16.9947 14.4546 18 13.1486 18H6.84639C5.54299 18 4.45829 16.9986 4.35435 15.6994L3.4584 4.5ZM4.5416 5.5L5.35117 15.6196C5.41353 16.3992 6.06435 17 6.84639 17H13.1486C13.9322 17 14.5837 16.3968 14.6441 15.6155L15.4256 5.5H4.5416Z"
+                                                  fill="#A0A0A4"/>
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                  d="M13 5.5H7V3.46875C7 2.65758 7.65758 2 8.46875 2H11.5312C12.3424 2 13 2.65758 13 3.46875V5.5ZM8.46875 3C8.20987 3 8 3.20987 8 3.46875V4.5H12V3.46875C12 3.20987 11.7901 3 11.5312 3H8.46875Z"
+                                                  fill="#A0A0A4"/>
+                                        </svg>
+                                    </div>
+                                    <span class="pick-up-rating">
+                                        <svg class="star" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.69769 1.14922C6.43817 0.528396 5.56198 0.528387 5.30244 1.14919L6.69769 1.14922ZM5.30244 1.14919L4.14719 3.90977L1.19202 4.16613C0.519264 4.22467 0.262282 5.05966 0.759713 5.49464L3.00514 7.45915L2.33207 10.3824C2.18436 11.0238 2.87792 11.5567 3.46133 11.2023L6.00032 9.65611L8.53797 11.2015C9.12269 11.5588 9.81568 11.0227 9.66861 10.3826L8.99549 7.45915L11.2402 5.49537C11.7385 5.05961 11.4793 4.22519 10.8083 4.16667L7.85294 3.91029L6.69769 1.14922" fill="#FF970D"/>
+                                        </svg>
+                                        <span class="pick-up-rating-number">4.99</span>
+                                        <p>Пункт выдачи</p>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
 
+                    <div class="delivery-addresses customer-addresses">
+                        <div class="delivery-addresses-title-container">
+                            <p class="delivery-addresses-title">Мои адреса</p>
+                        </div>
+                        <div>
+                            <ul class="address-items customer-address-items">
+                                <li class="address-item customer-address-item">
+                                    <input type="radio" id="customer-address-0" name="customer-addresses">
+                                    <div class="address-item-wrapper">
+                                        <label for="customer-address-0" class="address-label">
+                                            <p class="address-text">Бишкек, улица Табышалиева, 57</p>
+                                        </label>
+                                        <svg class="trashBin" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                             viewBox="0 0 20 20" fill="none">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                  d="M2.5 5C2.5 4.72386 2.72386 4.5 3 4.5H17C17.2761 4.5 17.5 4.72386 17.5 5C17.5 5.27614 17.2761 5.5 17 5.5H3C2.72386 5.5 2.5 5.27614 2.5 5Z"
+                                                  fill="#A0A0A4"/>
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                  d="M3.4584 4.5H16.5059L15.6411 15.6926C15.5405 16.9947 14.4546 18 13.1486 18H6.84639C5.54299 18 4.45829 16.9986 4.35435 15.6994L3.4584 4.5ZM4.5416 5.5L5.35117 15.6196C5.41353 16.3992 6.06435 17 6.84639 17H13.1486C13.9322 17 14.5837 16.3968 14.6441 15.6155L15.4256 5.5H4.5416Z"
+                                                  fill="#A0A0A4"/>
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                  d="M13 5.5H7V3.46875C7 2.65758 7.65758 2 8.46875 2H11.5312C12.3424 2 13 2.65758 13 3.46875V5.5ZM8.46875 3C8.20987 3 8 3.20987 8 3.46875V4.5H12V3.46875C12 3.20987 11.7901 3 11.5312 3H8.46875Z"
+                                                  fill="#A0A0A4"/>
+                                        </svg>
+                                    </div>
+                                </li>
+                                <li class="address-item customer-address-item">
+                                    <input type="radio" id="customer-address-1" name="customer-addresses">
+                                    <div class="address-item-wrapper">
+                                        <label for="customer-address-1" class="address-label">
+                                            <p class="address-text">Бишкек, улица Жукеева-Пудовкина, 77/1</p>
+                                        </label>
+                                        <svg class="trashBin" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                             viewBox="0 0 20 20" fill="none">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                  d="M2.5 5C2.5 4.72386 2.72386 4.5 3 4.5H17C17.2761 4.5 17.5 4.72386 17.5 5C17.5 5.27614 17.2761 5.5 17 5.5H3C2.72386 5.5 2.5 5.27614 2.5 5Z"
+                                                  fill="#A0A0A4"/>
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                  d="M3.4584 4.5H16.5059L15.6411 15.6926C15.5405 16.9947 14.4546 18 13.1486 18H6.84639C5.54299 18 4.45829 16.9986 4.35435 15.6994L3.4584 4.5ZM4.5416 5.5L5.35117 15.6196C5.41353 16.3992 6.06435 17 6.84639 17H13.1486C13.9322 17 14.5837 16.3968 14.6441 15.6155L15.4256 5.5H4.5416Z"
+                                                  fill="#A0A0A4"/>
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                  d="M13 5.5H7V3.46875C7 2.65758 7.65758 2 8.46875 2H11.5312C12.3424 2 13 2.65758 13 3.46875V5.5ZM8.46875 3C8.20987 3 8 3.20987 8 3.46875V4.5H12V3.46875C12 3.20987 11.7901 3 11.5312 3H8.46875Z"
+                                                  fill="#A0A0A4"/>
+                                        </svg>
+                                    </div>
+                                </li>
+                                <li class="address-item customer-address-item">
+                                    <input type="radio" id="customer-address-2" name="customer-addresses">
+                                    <div class="address-item-wrapper">
+                                        <label for="customer-address-2" class="address-label">
+                                            <p class="address-text">Бишкек, микрорайон Джал, улица Ахунбаева Исы,
+                                                67/1</p>
+                                        </label>
+                                        <svg class="trashBin" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                             viewBox="0 0 20 20" fill="none">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                  d="M2.5 5C2.5 4.72386 2.72386 4.5 3 4.5H17C17.2761 4.5 17.5 4.72386 17.5 5C17.5 5.27614 17.2761 5.5 17 5.5H3C2.72386 5.5 2.5 5.27614 2.5 5Z"
+                                                  fill="#A0A0A4"/>
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                  d="M3.4584 4.5H16.5059L15.6411 15.6926C15.5405 16.9947 14.4546 18 13.1486 18H6.84639C5.54299 18 4.45829 16.9986 4.35435 15.6994L3.4584 4.5ZM4.5416 5.5L5.35117 15.6196C5.41353 16.3992 6.06435 17 6.84639 17H13.1486C13.9322 17 14.5837 16.3968 14.6441 15.6155L15.4256 5.5H4.5416Z"
+                                                  fill="#A0A0A4"/>
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                  d="M13 5.5H7V3.46875C7 2.65758 7.65758 2 8.46875 2H11.5312C12.3424 2 13 2.65758 13 3.46875V5.5ZM8.46875 3C8.20987 3 8 3.20987 8 3.46875V4.5H12V3.46875C12 3.20987 11.7901 3 11.5312 3H8.46875Z"
+                                                  fill="#A0A0A4"/>
+                                        </svg>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="choose-button-container">
+                    <div class="choose-button-wrapper">
+                        <h4 class="choose-button">Выбрать</h4>
+                    </div>
+                </div>
             </div>
             <div class="payment-method-modal">
                 <div class="cards-container">
@@ -784,11 +969,11 @@
                 </div>
                 <div class="payment-method-modal-title-container">
                     <h3 class="payment-method-modal-title-text">Способ оплаты</h3>
-                    <span class="payment-method-modal-title-close"></span>
+                    <span class="modal-close close-payment-modal"></span>
                 </div>
-                <div class="choose-card-button-container">
-                    <div class="choose-card-button-wrapper">
-                        <h4 class="choose-card-button">Выбрать</h4>
+                <div class="choose-button-container">
+                    <div class="choose-button-wrapper">
+                        <h4 class="choose-button">Выбрать</h4>
                     </div>
                 </div>
             </div>
