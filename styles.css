@@ -1519,9 +1519,7 @@ legend{
 .form-error-make-it-red input{
     border-bottom: 1px solid #F55123;
 }
-.form-error-make-it-red input::placeholder{
-    color: #F55123;
-}
+
 
 
 .customer-form input{
@@ -2581,4 +2579,7 @@ label{
     right: 0;
     left: 0;
     overflow: hidden;
+}
+.form-error-make-it-red input::placeholder{
+    color: #F55123;
 }
