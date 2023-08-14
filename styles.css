@@ -1494,6 +1494,36 @@ main{
     display: inline-block;
 }
 
+fieldset{
+    border: 0;
+    position: relative;
+}
+legend{
+    position: absolute;
+    top: -17px;
+    color: #A0A0A4;
+    /* Сайт/Caption */
+    font-family: Segoe UI;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px; /* 123.077% */
+}
+
+.form-error-make-it-red legend{
+    color: #F55123;
+}
+.form-error-make-it-red .customer-form-error{
+    color: #F55123;
+}
+.form-error-make-it-red input{
+    border-bottom: 1px solid #F55123;
+}
+.form-error-make-it-red input::placeholder{
+    color: #F55123;
+}
+
+
 .customer-form input{
     text-decoration: none;
     border: none;
@@ -1573,9 +1603,9 @@ main{
         flex-direction: column;
         justify-content: end;
     }
-    .family-name,
+    .familyName,
     .email,
-    .tel-number,
+    .telNumber,
     .enn{
         margin-top: 16px;
     }

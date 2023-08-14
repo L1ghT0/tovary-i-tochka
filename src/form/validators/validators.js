@@ -30,18 +30,23 @@ function showInputEmptyError(inputs) {
         switch (input.id){
             case 'name':
                 document.getElementById(`${input.id}-error`).innerText = 'Укажите имя';
+                addRedError(input);
                 break;
             case 'familyName':
                 document.getElementById(`${input.id}-error`).innerText = 'Введите фамилию';
+                addRedError(input)
                 break;
             case 'email':
                 document.getElementById(`${input.id}-error`).innerText = 'Укажите электронную почту';
+                addRedError(input);
                 break;
             case 'telNumber':
                 document.getElementById(`${input.id}-error`).innerText = 'Укажите номер телефона';
+                addRedError(input);
                 break;
             case 'enn':
                 document.getElementById(`${input.id}-error`).innerText = 'Укажите ИНН';
+                addRedError(input);
                 break;
             default:
                 break;
@@ -52,6 +57,7 @@ function showInputEmptyError(inputs) {
 function hideInputEmptyError (inputs){
     for (let input of inputs){
         document.getElementById(`${input.id}-error`).innerText = '';
+        removeRedError(input);
     }
 }
 
@@ -62,12 +68,14 @@ function hideInputEmptyError (inputs){
 
 
 export function validateEnn() {
-    const enn = document.getElementById('enn').value;
-    if(isEnnCorrect(enn)){
+    const enn = document.getElementById('enn');
+    if(isEnnCorrect(enn.value)){
         showEnnError(false); // enn is correct, don't show the error
+        removeRedError(enn);
         return true;
     }
     showEnnError(true); // enn is incorrect, show the error
+    addRedError(enn);
     return false;
 }
 function showEnnError(needShow) {
@@ -95,13 +103,15 @@ function isEnnCorrect(enn){
 
 
 export function validateTelNubmer(){
-    const telNumber = document.getElementById('telNumber').value;
+    const telNumber = document.getElementById('telNumber');
 
-    if(isTelNumberCorrect(telNumber)){
+    if(isTelNumberCorrect(telNumber.value)){
         showTelNumberError(false); // tel number is correct, don't show the error
+        removeRedError(telNumber);
         return true;
     }
     showTelNumberError(true); // tel number is incorrect, show the error
+    addRedError(telNumber);
     return false;
 }
 
@@ -127,19 +137,22 @@ function isTelNumberCorrect (telNumber) {
 
 
 export function validateEmail(){
-    const email = document.getElementById('email').value;
+    const email = document.getElementById('email');
 
-    if(isEmailCorrect(email)){
+    if(isEmailCorrect(email.value)){
         showEmailError(false);
+        removeRedError(email);
         return true;   // email is correct
     }
     showEmailError(true);
+    addRedError(email);
     return false; // email is incorrect
 }
 
 function showEmailError (needShow){
     let emailError = document.getElementById(`email-error`);
     if(needShow){
+        console.log(emailError.innerText)
         if(emailError.innerText === ''){
             emailError.innerText = 'Проверьте адрес электронной почты';
         }
@@ -166,4 +179,10 @@ function isNumeric(str) {
         !isNaN(parseFloat(str)) // ...and ensure strings of whitespace fail
 }
 
+function addRedError(item){
+    document.querySelector(`.${item.id}`).classList.add('form-error-make-it-red');
+}
 
+function removeRedError(item){
+    document.querySelector(`.${item.id}`).classList.remove('form-error-make-it-red');
+}

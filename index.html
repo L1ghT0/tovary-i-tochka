@@ -630,26 +630,40 @@
                         <form class="customer-form" id="form">
                             <div class="customer-form-top">
                                 <div class="name">
-                                    <input type="text" placeholder="Имя" id="name" class="form-input">
+                                    <fieldset>
+                                        <legend id="legend-name" hidden="hidden">Имя</legend>
+                                        <input type="text" placeholder="Имя" id="name" class="form-input">
+                                    </fieldset>
                                     <span class="customer-form-error" id="name-error"></span>
                                 </div>
-                                <div class="family-name">
-                                    <input type="text" placeholder="Фамилия" id="familyName" class="form-input">
+                                <div class="familyName">
+                                    <fieldset>
+                                        <legend id="legend-familyName" hidden="hidden">Фамилия</legend>
+                                        <input type="text" placeholder="Фамилия" id="familyName" class="form-input">
+                                    </fieldset>
                                     <span class="customer-form-error" id="familyName-error"></span>
                                 </div>
                             </div>
                             <div class="customer-form-bottom">
                                 <div class="email">
-                                    <input type="email" placeholder="Почта" id="email" class="form-input">
+                                    <fieldset>
+                                        <legend id="legend-email" hidden="hidden">Почта</legend>
+                                        <input type="email" placeholder="Почта" id="email" class="form-input">
+                                    </fieldset>
                                     <span class="customer-form-error" id="email-error"></span>
                                 </div>
-                                <div class="tel-number">
-                                    <input type="text" placeholder="Телефон" value="+7 (988) 123-45-67" id="telNumber"
-                                           class="form-input">
+                                <div class="telNumber">
+                                    <fieldset>
+                                        <legend id="legend-telNumber" hidden="hidden">Телефон</legend>
+                                        <input type="text" placeholder="Телефон" value="+7 (988) 123-45-67" id="telNumber" class="form-input">
+                                    </fieldset>
                                     <span class="customer-form-error" id="telNumber-error"></span>
                                 </div>
                                 <div class="enn">
-                                    <input type="text" placeholder="ИНН" id="enn" class="form-input">
+                                    <fieldset>
+                                        <legend id="legend-enn" hidden="hidden">ИНН</legend>
+                                        <input type="text" placeholder="ИНН" id="enn" class="form-input">
+                                    </fieldset>
                                     <span class="customer-form-error" id="enn-error">Для таможенного оформления</span>
                                 </div>
                             </div>
@@ -768,7 +782,8 @@
                                     <input type="radio" id="pick-up-address-0" name="pick-up-addresses">
                                     <div class="address-item-wrapper">
                                         <label for="pick-up-address-0" class="address-label">
-                                            <p class="address-text">г. Бишкек, микрорайон Джал, улица Ахунбаева Исы, д. 67/1</p>
+                                            <p class="address-text">г. Бишкек, микрорайон Джал, улица Ахунбаева Исы, д.
+                                                67/1</p>
                                         </label>
                                         <svg class="trashBin" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                              viewBox="0 0 20 20" fill="none">
@@ -784,8 +799,11 @@
                                         </svg>
                                     </div>
                                     <span class="pick-up-rating">
-                                        <svg class="star" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.69769 1.14922C6.43817 0.528396 5.56198 0.528387 5.30244 1.14919L6.69769 1.14922ZM5.30244 1.14919L4.14719 3.90977L1.19202 4.16613C0.519264 4.22467 0.262282 5.05966 0.759713 5.49464L3.00514 7.45915L2.33207 10.3824C2.18436 11.0238 2.87792 11.5567 3.46133 11.2023L6.00032 9.65611L8.53797 11.2015C9.12269 11.5588 9.81568 11.0227 9.66861 10.3826L8.99549 7.45915L11.2402 5.49537C11.7385 5.05961 11.4793 4.22519 10.8083 4.16667L7.85294 3.91029L6.69769 1.14922" fill="#FF970D"/>
+                                        <svg class="star" xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                             viewBox="0 0 12 12" fill="none">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                  d="M6.69769 1.14922C6.43817 0.528396 5.56198 0.528387 5.30244 1.14919L6.69769 1.14922ZM5.30244 1.14919L4.14719 3.90977L1.19202 4.16613C0.519264 4.22467 0.262282 5.05966 0.759713 5.49464L3.00514 7.45915L2.33207 10.3824C2.18436 11.0238 2.87792 11.5567 3.46133 11.2023L6.00032 9.65611L8.53797 11.2015C9.12269 11.5588 9.81568 11.0227 9.66861 10.3826L8.99549 7.45915L11.2402 5.49537C11.7385 5.05961 11.4793 4.22519 10.8083 4.16667L7.85294 3.91029L6.69769 1.14922"
+                                                  fill="#FF970D"/>
                                         </svg>
                                         <span class="pick-up-rating-number">4.99</span>
                                         <p>Пункт выдачи</p>
@@ -795,7 +813,8 @@
                                     <input type="radio" id="pick-up-address-1" name="pick-up-addresses">
                                     <div class="address-item-wrapper">
                                         <label for="pick-up-address-1" class="address-label">
-                                            <p class="address-text">г. Бишкек, микрорайон Джал, улица Ахунбаева Исы, д. 67/1</p>
+                                            <p class="address-text">г. Бишкек, микрорайон Джал, улица Ахунбаева Исы, д.
+                                                67/1</p>
                                         </label>
                                         <svg class="trashBin" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                              viewBox="0 0 20 20" fill="none">
@@ -811,8 +830,11 @@
                                         </svg>
                                     </div>
                                     <span class="pick-up-rating">
-                                        <svg class="star" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.69769 1.14922C6.43817 0.528396 5.56198 0.528387 5.30244 1.14919L6.69769 1.14922ZM5.30244 1.14919L4.14719 3.90977L1.19202 4.16613C0.519264 4.22467 0.262282 5.05966 0.759713 5.49464L3.00514 7.45915L2.33207 10.3824C2.18436 11.0238 2.87792 11.5567 3.46133 11.2023L6.00032 9.65611L8.53797 11.2015C9.12269 11.5588 9.81568 11.0227 9.66861 10.3826L8.99549 7.45915L11.2402 5.49537C11.7385 5.05961 11.4793 4.22519 10.8083 4.16667L7.85294 3.91029L6.69769 1.14922" fill="#FF970D"/>
+                                        <svg class="star" xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                             viewBox="0 0 12 12" fill="none">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                  d="M6.69769 1.14922C6.43817 0.528396 5.56198 0.528387 5.30244 1.14919L6.69769 1.14922ZM5.30244 1.14919L4.14719 3.90977L1.19202 4.16613C0.519264 4.22467 0.262282 5.05966 0.759713 5.49464L3.00514 7.45915L2.33207 10.3824C2.18436 11.0238 2.87792 11.5567 3.46133 11.2023L6.00032 9.65611L8.53797 11.2015C9.12269 11.5588 9.81568 11.0227 9.66861 10.3826L8.99549 7.45915L11.2402 5.49537C11.7385 5.05961 11.4793 4.22519 10.8083 4.16667L7.85294 3.91029L6.69769 1.14922"
+                                                  fill="#FF970D"/>
                                         </svg>
                                         <span class="pick-up-rating-number">4.99</span>
                                         <p>Пункт выдачи</p>
@@ -838,8 +860,11 @@
                                         </svg>
                                     </div>
                                     <span class="pick-up-rating">
-                                        <svg class="star" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.69769 1.14922C6.43817 0.528396 5.56198 0.528387 5.30244 1.14919L6.69769 1.14922ZM5.30244 1.14919L4.14719 3.90977L1.19202 4.16613C0.519264 4.22467 0.262282 5.05966 0.759713 5.49464L3.00514 7.45915L2.33207 10.3824C2.18436 11.0238 2.87792 11.5567 3.46133 11.2023L6.00032 9.65611L8.53797 11.2015C9.12269 11.5588 9.81568 11.0227 9.66861 10.3826L8.99549 7.45915L11.2402 5.49537C11.7385 5.05961 11.4793 4.22519 10.8083 4.16667L7.85294 3.91029L6.69769 1.14922" fill="#FF970D"/>
+                                        <svg class="star" xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                             viewBox="0 0 12 12" fill="none">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                  d="M6.69769 1.14922C6.43817 0.528396 5.56198 0.528387 5.30244 1.14919L6.69769 1.14922ZM5.30244 1.14919L4.14719 3.90977L1.19202 4.16613C0.519264 4.22467 0.262282 5.05966 0.759713 5.49464L3.00514 7.45915L2.33207 10.3824C2.18436 11.0238 2.87792 11.5567 3.46133 11.2023L6.00032 9.65611L8.53797 11.2015C9.12269 11.5588 9.81568 11.0227 9.66861 10.3826L8.99549 7.45915L11.2402 5.49537C11.7385 5.05961 11.4793 4.22519 10.8083 4.16667L7.85294 3.91029L6.69769 1.14922"
+                                                  fill="#FF970D"/>
                                         </svg>
                                         <span class="pick-up-rating-number">4.99</span>
                                         <p>Пункт выдачи</p>
