@@ -1510,18 +1510,6 @@ legend{
     line-height: 16px; /* 123.077% */
 }
 
-.form-error-make-it-red legend{
-    color: #F55123;
-}
-.form-error-make-it-red .customer-form-error{
-    color: #F55123;
-}
-.form-error-make-it-red input{
-    border-bottom: 1px solid #F55123;
-}
-
-
-
 .customer-form input{
     text-decoration: none;
     border: none;
@@ -2579,6 +2567,17 @@ label{
     right: 0;
     left: 0;
     overflow: hidden;
+}
+
+/* these styles has been moved in the end because the issue styles has priority*/
+.form-error-make-it-red legend{
+    color: #F55123;
+}
+.form-error-make-it-red .customer-form-error{
+    color: #F55123;
+}
+.form-error-make-it-red input{
+    border-bottom: 1px solid #F55123;
 }
 .form-error-make-it-red input::placeholder{
     color: #F55123;
