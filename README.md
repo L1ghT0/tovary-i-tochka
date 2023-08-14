@@ -14,14 +14,16 @@ This project was written using only:
 - Automatically repositioning hover-elements
 - Form validator
 
+#
 
+initialData: all the data used has been taken from psd-template
+and has been placed in the 'initialData.js' file.
 
 ### Screenshorts:
 
-Will be added soon
-
+![tovaryITochka](/Screenshots/tovaryITochka.png)
 
 #
 
-initialData: all the data used has been taken from psd-template 
-and has been placed in the 'initialData.js' file.
+![tovaryITochkaCollapsed](/Screenshots/tovaryITochkaCollaped.png)
+
