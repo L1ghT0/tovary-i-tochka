@@ -7,9 +7,7 @@
     <list default="true" id="f60402c3-7014-45d5-8573-c93495f29147" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modals/modals.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modals/modals.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modals/modalsGeneral.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modals/modalsGeneral.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modals/paymentMethodModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modals/paymentMethodModal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/animation/animation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/animation/animation.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,7 +54,7 @@
       <option name="presentableId" value="Default" />
       <updated>1691927775775</updated>
       <workItem from="1691927778684" duration="48000" />
-      <workItem from="1691928355092" duration="19902000" />
+      <workItem from="1691928355092" duration="26132000" />
     </task>
     <servers />
   </component>

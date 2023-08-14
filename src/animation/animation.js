@@ -23,8 +23,6 @@ function timing(timeFraction) {
 }
 
 
-
-
 function makeRoll(elem) {
     let height = elem.offsetHeight;
     return (progress) => {
@@ -55,33 +53,54 @@ function rotate_collapse_arrow() {
 }
 
 
-
 let HTMLitems = document.querySelectorAll('.items');
 let arrows_collapse = document.querySelectorAll('.arrow-collapse')
+document.querySelectorAll('.items').forEach(item => item.style.overflow = 'hidden');
 
 for (let i = 0; i < arrows_collapse.length; i++) {
     let unroll = makeUnroll(HTMLitems[i])
     let roll = makeRoll(HTMLitems[i])
     let rotate = rotate_collapse_arrow();
+    let overflowHidden = setOverflow('hidden');
+    let overflowVisible = setOverflow('visible');
 
     arrows_collapse[i].addEventListener(('click'), (e) => {
         if (e.target.classList.contains('collapsed')) { // we do unroll items
             let draw = unroll;
-            animate({
-                duration: 300,
-                timing,
-                draw
-            });
+            animate({duration: 300, timing, draw});
             e.target.classList.remove('collapsed');
-        } else { // we do roll items
+            disableArrow(e.target);
+            overflowVisible(e.target)
+        } else {
+            disableArrow(e.target);
+            overflowHidden(e.target)
             let draw = roll;
-            animate({
-                duration: 300,
-                timing,
-                draw,
-            });
+            animate({duration: 300, timing, draw,});
             e.target.classList.add('collapsed');
+
         }
         rotate(e.target);
     })
+}
+
+function setOverflow(value) {
+    let overflow = value;
+    return (target) => {
+        if (target.id === 'collapse-items') {
+            if (overflow === 'hidden') {
+                document.querySelectorAll('.selected-items .items').forEach(item => item.style.overflow = overflow);
+            } else {
+                setTimeout(() => {
+                    document.querySelectorAll('.selected-items .items').forEach(item => item.style.overflow = overflow);
+                }, 300)
+            }
+        }
+    }
+}
+
+function disableArrow(target){
+    target.style.pointerEvents = 'none';
+    setTimeout(()=>{
+        target.style.pointerEvents = 'auto';
+    },300)
 }
