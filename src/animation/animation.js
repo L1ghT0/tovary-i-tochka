@@ -55,7 +55,6 @@ function rotate_collapse_arrow() {
 
 let HTMLitems = document.querySelectorAll('.items');
 let arrows_collapse = document.querySelectorAll('.arrow-collapse')
-document.querySelectorAll('.items').forEach(item => item.style.overflow = 'hidden');
 
 for (let i = 0; i < arrows_collapse.length; i++) {
     let unroll = makeUnroll(HTMLitems[i])
