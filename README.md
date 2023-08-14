@@ -21,9 +21,9 @@ and has been placed in the 'initialData.js' file.
 
 ### Screenshorts:
 
-![tovaryITochka](/Screenshots/tovaryITochka.png)
+![tovaryITochka](/screenshots/tovaryITochka.png)
 
 #
 
-![tovaryITochkaCollapsed](/Screenshots/tovaryITochkaCollaped.png)
+![tovaryITochkaCollapsed](/screenshots/tovaryITochkaCollaped.png)
 
