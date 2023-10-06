@@ -4,6 +4,8 @@ let _html = document.documentElement;
 export let scrollPosition;
 
 export function freezeHTML(){
+    document.querySelector('.modals').style.display = 'block';
+
     let marginSize = window.innerWidth - _html.clientWidth;
     _bodyScrollControl(marginSize);
     if(_html.offsetWidth <= 480){
@@ -19,6 +21,8 @@ export function freezeHTML(){
 }
 
 export function unfreezeHTML(){
+    document.querySelector('.modals').style.display = 'none';
+
     _html.classList.remove("hystmodal__opened");
     window.scrollTo(0, scrollPosition);
     _html.style.top = "";
