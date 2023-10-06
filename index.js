@@ -13,7 +13,7 @@ function initializeApp() {
     refresh_data();
 }
 
-document.querySelector('.items').addEventListener('click', (e) => {
+document.querySelector('.selected-items .items').addEventListener('click', (e) => {
     refresh_data();
 })
 

@@ -33,7 +33,7 @@ for (let select_item_checkbox of select_item_checkboxes) {
 
 
 // single-item toggle checkbox
-Array.prototype.slice.call(document.querySelectorAll('.item')).forEach(HTMLitem => {
+Array.prototype.slice.call(document.querySelectorAll('.selected-items .item')).forEach(HTMLitem => {
     HTMLitem.addEventListener('click', (e) => {
         setTimeout(() => { // macrotask queue in order to get a proper value
             let checked = document.querySelector(`[id='${HTMLitem.id}'] .select-input`).checked;
