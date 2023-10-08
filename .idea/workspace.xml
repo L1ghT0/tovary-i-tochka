@@ -5,10 +5,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f60402c3-7014-45d5-8573-c93495f29147" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/L_zero.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/js/components/modals/modals.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/initialData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/initialData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/animation/animation.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/checkboxes/checkboxes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/counter/counter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/components/content/main/items/selected/counter/counter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/form/form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/components/content/main/customerData/form/form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/form/validators/validators.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/utils/validators/validators.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hover/hover.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/assets/Search.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/genereal/Search.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/assets/edit-icon.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/genereal/edit-icon.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/assets/info.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/genereal/info.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/assets/menuMobile.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/genereal/menuMobile.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/assets/price_shipping.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/genereal/price_shipping.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/assets/profile.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/genereal/profile.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/assets/searchMobile.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/genereal/searchMobile.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/assets/shoppingTrolley.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/genereal/shoppingTrolley.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/assets/star_fill.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/genereal/star_fill.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/cards/maestro.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/cards/maestro.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/cards/mastercard.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/cards/mastercard.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/cards/mir.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/cards/mir.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/cards/visa.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/cards/visa.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/items/MobileCase.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/items/MobileCase.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/items/Pencils.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/items/Pencils.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/items/TShirt.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/items/TShirt.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modals/deliveryMethodModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/components/modals/deliveryMethod/deliveryMethod.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modals/modals.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modals/modalsGeneral.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/components/modals/modalsGeneral.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modals/paymentMethodModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/components/modals/paymentMethod/paymentMethod.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/styles/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,19 +61,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/zvjxr/Desktop/Main_folder/JavaScript/Wildberries/L_zero",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/zvjxr/Desktop/Main_folder/JavaScript/Wildberries/L_zero&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\zvjxr\Desktop\Main_folder\JavaScript\Wildberries\L_zero\src\js\components" />
+      <recent name="C:\Users\zvjxr\Desktop\Main_folder\JavaScript\Wildberries\L_zero\src\js\done" />
+      <recent name="C:\Users\zvjxr\Desktop\Main_folder\JavaScript\Wildberries\L_zero\src\js\common\greenWordFree_PopUp" />
+      <recent name="C:\Users\zvjxr\Desktop\Main_folder\JavaScript\Wildberries\L_zero\src\js\utils\parsing" />
+      <recent name="C:\Users\zvjxr\Desktop\Main_folder\JavaScript\Wildberries\L_zero\src\js\components\content\main\items\selected\selected_PopUps" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -57,6 +94,7 @@
       <workItem from="1691927778684" duration="48000" />
       <workItem from="1691928355092" duration="37257000" />
       <workItem from="1696541021903" duration="19793000" />
+      <workItem from="1696626567777" duration="29537000" />
     </task>
     <servers />
   </component>
