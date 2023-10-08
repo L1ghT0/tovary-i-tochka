@@ -1439,6 +1439,7 @@ main{
 .pencils-item .red-circle-number{
     left: 28px;
 }
+
 .pencils-item .red-circle-number span{
     text-align: center;
 }
@@ -1448,6 +1449,7 @@ main{
 
 .TShirt-item .red-circle-number{
     display: none;
+    left: 28px;
 }
 
 .delivery-method .delivery-confirmed{
