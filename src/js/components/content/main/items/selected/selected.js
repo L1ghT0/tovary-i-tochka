@@ -90,3 +90,15 @@ document.querySelectorAll('.organization-info-icon').forEach(item=>{
         e.target.nextSibling.nextSibling.style.display = 'none';
     })
 })
+
+
+// set amount of selected items
+let amount_of_selected_items = document.getElementById('amount-of-selected-items');
+document.querySelector('.selected-items .items').addEventListener('click', (e)=>{
+    if(document.querySelector('.selected-items .items').children.length === 0){ // if there's no items we hide the whole element
+        document.querySelector('.header-shopping-trolley .red-circle-number').style.display = 'none'
+    } else {
+        document.querySelector('.header-shopping-trolley .red-circle-number').style.display = 'block'
+        amount_of_selected_items.innerText = document.querySelector('.selected-items .items').children.length
+    }
+})
