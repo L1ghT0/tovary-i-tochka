@@ -36,34 +36,49 @@ function rotate_collapse_arrow() {
     }
 }
 
+setCollapseAnimation();
 
-let HTMLitems = document.querySelectorAll('.items');
-let arrows_collapse = document.querySelectorAll('.arrow-collapse')
+function setCollapseAnimation() {
+    let HTMLitems = document.querySelectorAll('.items');
+    let arrows_collapse = document.querySelectorAll('.arrow-collapse')
 
-for (let i = 0; i < arrows_collapse.length; i++) {
-    let unroll = makeUnroll(HTMLitems[i])
-    let roll = makeRoll(HTMLitems[i])
-    let rotate = rotate_collapse_arrow();
-    let overflowHidden = setOverflow('hidden');
-    let overflowVisible = setOverflow('visible');
+    for (let i = 0; i < arrows_collapse.length; i++) {
+        if (arrows_collapse[i].classList.contains('collapsed')) continue; // it protects us not to reset animation for collapsed items
 
-    arrows_collapse[i].addEventListener(('click'), (e) => {
-        if (e.target.classList.contains('collapsed')) { // we do unroll items
-            let draw = unroll;
-            animate({duration: 300, timing, draw});
-            e.target.classList.remove('collapsed');
-            disableArrow(e.target);
-            overflowVisible(e.target)
-        } else {
-            disableArrow(e.target);
-            overflowHidden(e.target)
-            let draw = roll;
-            animate({duration: 300, timing, draw,});
-            e.target.classList.add('collapsed');
+        let unroll = makeUnroll(HTMLitems[i])
+        let roll = makeRoll(HTMLitems[i])
+        let rotate = rotate_collapse_arrow();
+        let overflowHidden = setOverflow('hidden');
+        let overflowVisible = setOverflow('visible');
 
+        arrows_collapse[i].onclick = collapse
+
+        function collapse(e) {
+            if (e.target.classList.contains('collapsed')) { // we do unroll items
+                let draw = unroll;
+                animate({duration: 300, timing, draw});
+                e.target.classList.remove('collapsed');
+                disableArrow(e.target);
+                overflowVisible(e.target)
+                setHeightAuto(HTMLitems[i])
+
+            } else {
+                disableArrow(e.target);
+                overflowHidden(e.target)
+                let draw = roll;
+                animate({duration: 300, timing, draw,});
+                e.target.classList.add('collapsed');
+
+            }
+            rotate(e.target);
         }
-        rotate(e.target);
-    })
+    }
+}
+
+function setHeightAuto(elem) {
+    setTimeout(() => {
+        elem.style.height = 'auto'
+    }, 310)
 }
 
 function setOverflow(value) {
@@ -81,20 +96,20 @@ function setOverflow(value) {
     }
 }
 
-function disableArrow(target){
+function disableArrow(target) {
     target.style.pointerEvents = 'none';
-    setTimeout(()=>{
+    setTimeout(() => {
         target.style.pointerEvents = 'auto';
-    },300)
+    }, 300)
 }
 
 
 // trash-bin logic --->
-    document.querySelectorAll('.item').forEach(trash_bin =>{
-    trash_bin.addEventListener('click', (e)=>{
+document.querySelectorAll('.item').forEach(item => {
+    item.addEventListener('click', (e) => {
         if (!e.target.classList.contains('trashBin') && !e.target.parentNode.classList.contains('trashBin')) return;
         let htmlItem = e.currentTarget;
-        if(htmlItem.id){
+        if (htmlItem.id) {
             let item = getItem(htmlItem.id)
             document.querySelectorAll(`.ready-to-deliver-items .${item[0].name}-item`).forEach(item => item.remove())
             document.querySelectorAll(`.ready-to-deliver-items .${item[0].name}s-item`).forEach(item => item.remove())
@@ -102,6 +117,9 @@ function disableArrow(target){
         }
         htmlItem.remove();
         refresh_data();
+
+        // Once we deleted an element we need to reset animation because items container has a new height.
+        setCollapseAnimation();
     })
 })
 
