@@ -428,6 +428,14 @@ main{
     justify-content: space-between;
     align-items: center;
 }
+/*.not-found-items-top-header*/
+#not-found-amount-of-items{
+    font-family: Segoe UI;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px; /* 150% */
+}
 
 .arrow-collapse{
     position: relative;

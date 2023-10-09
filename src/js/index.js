@@ -71,6 +71,7 @@ export function setTotals() {
 
 
 function setReadyToDeliverItems (){
+    shouldHideDeliveryDates();
     items.forEach(item =>{
         setTimeout(()=>{
             setAmountInRedCircle(item)

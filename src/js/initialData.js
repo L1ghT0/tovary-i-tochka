@@ -16,7 +16,7 @@ const tShirtDiscount = 100 - (TShirtPrice_withDiscount * 100) / TShirtPrice_with
 const mobileCaseDiscount = 100 - (mobileCasePrice_withDiscount * 100) / mobileCasePrice_withoutDiscount;
 const pencilDiscount = 100 - (pencilPrice_withDiscount * 100) / pencilPrice_withoutDiscount;
 
-export const items = [
+export let items = [
     {
         id: "0",
         name: 'TShirt',
@@ -71,3 +71,10 @@ export const items = [
         additionalInfo: {},
     }];
 
+export function removeItem(id){
+    items = items.filter(item => item.id !== id);
+}
+
+export function getItem(id){
+    return items.filter(item => item.id === id);
+}

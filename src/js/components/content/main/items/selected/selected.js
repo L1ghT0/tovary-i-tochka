@@ -33,13 +33,21 @@ for (let select_item_checkbox of select_item_checkboxes) {
         select_all.checked = select_item_checkboxes.filter(select_item_checkbox => select_item_checkbox.checked).length === select_item_checkboxes.length && !select_all.checked;
     })
 }
-
+document.querySelectorAll('.selected-items .item').forEach(item=>{
+    item.addEventListener('click', (e)=>{
+        setTimeout(() => {
+            let select_item_checkboxes = Array.prototype.slice.call(document.querySelectorAll('.item .select-input'));
+            select_all.checked = select_item_checkboxes.filter(select_item_checkbox => select_item_checkbox.checked).length === select_item_checkboxes.length && select_item_checkboxes.length > 0
+        })
+    })
+})
 
 
 // single-item toggle checkbox
 Array.prototype.slice.call(document.querySelectorAll('.selected-items .item')).forEach(HTMLitem => {
     HTMLitem.addEventListener('click', (e) => {
         setTimeout(() => { // macrotask queue in order to get a proper value
+            if(!document.querySelector(`[id='${HTMLitem.id}'] .select-input`)) return
             let checked = document.querySelector(`[id='${HTMLitem.id}'] .select-input`).checked;
             items.forEach((item) => {
                 if (item.id === HTMLitem.id) {  // looking for an item by ID that has been clicked

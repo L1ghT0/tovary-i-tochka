@@ -1,6 +1,7 @@
 import './selected/selected.js'
 import './notFound/notFound.js'
-
+import {removeItem, getItem} from "../../../../initialData.js";
+import {refresh_data} from "../../../../index.js";
 
 // I have put animation here because this is something that has both "selected" and "notFound" items
 // Roll and unroll animations ----->
@@ -86,3 +87,22 @@ function disableArrow(target){
         target.style.pointerEvents = 'auto';
     },300)
 }
+
+
+// trash-bin logic --->
+    document.querySelectorAll('.item').forEach(trash_bin =>{
+    trash_bin.addEventListener('click', (e)=>{
+        if (!e.target.classList.contains('trashBin') && !e.target.parentNode.classList.contains('trashBin')) return;
+        let htmlItem = e.currentTarget;
+        if(htmlItem.id){
+            let item = getItem(htmlItem.id)
+            document.querySelectorAll(`.ready-to-deliver-items .${item[0].name}-item`).forEach(item => item.remove())
+            document.querySelectorAll(`.ready-to-deliver-items .${item[0].name}s-item`).forEach(item => item.remove())
+            removeItem(htmlItem.id);
+        }
+        htmlItem.remove();
+        refresh_data();
+    })
+})
+
+
