@@ -606,7 +606,7 @@ main{
     max-width: 275px;
 }
 .additional-item-info{
-    margin-top: 8px;
+    margin-top: 7px;
 }
 
 .item-size,
@@ -963,6 +963,9 @@ main{
         width: 100%;
         min-width: 100%;
     }
+    .additional-item-info{
+        margin-top: 8px;
+    }
 }
 /*Shopping trolley: selected items MEDIA --------------------------------------------------------->*/
 
@@ -1255,8 +1258,13 @@ main{
 
 /*Shopping trolley: not-found items MEDIA --------------------------------------------------------->*/
 
-
+@media screen and (max-width: 1024px){
+    .not-found-items{
+        margin-top: 41px;
+    }
+}
 @media screen and (max-width:480px) {
+
     .not-found-items{
         margin-top: 48px;
     }
@@ -2086,6 +2094,9 @@ legend{
 @media screen and (max-width: 480px){
     .content-right-payment-method{
         margin-top: 0px;
+    }
+    .confirmed-info .free-green-word{
+        margin-left: -5px;
     }
     .content-right-block{
         width: 100%;
