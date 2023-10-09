@@ -489,7 +489,7 @@ main{
 .select-input:checked + .select-checkbox:after,
 .select-input:not(:checked) + .select-checkbox:after{
     content: "";
-    top: 6px;
+    top: 7px;
     left: 5px;
     width: 10px;
     height: 5px;
@@ -543,7 +543,7 @@ main{
 
 .item-leftside .select-input:checked + .select-checkbox:after,
 .item-leftside .select-input:not(:checked) + .select-checkbox:after{
-    top: 41px;
+    top: 42px;
     left: 5px;
 }
 .item-leftside .select-checkbox{
