@@ -5,38 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f60402c3-7014-45d5-8573-c93495f29147" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/js/components/modals/modals.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/initialData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/initialData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/animation/animation.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checkboxes/checkboxes.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/counter/counter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/components/content/main/items/selected/counter/counter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/form/form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/components/content/main/customerData/form/form.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/form/validators/validators.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/utils/validators/validators.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hover/hover.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/assets/Search.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/genereal/Search.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/assets/edit-icon.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/genereal/edit-icon.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/assets/info.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/genereal/info.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/assets/menuMobile.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/genereal/menuMobile.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/assets/price_shipping.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/genereal/price_shipping.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/assets/profile.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/genereal/profile.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/assets/searchMobile.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/genereal/searchMobile.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/assets/shoppingTrolley.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/genereal/shoppingTrolley.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/assets/star_fill.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/genereal/star_fill.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/cards/maestro.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/cards/maestro.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/cards/mastercard.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/cards/mastercard.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/cards/mir.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/cards/mir.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/cards/visa.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/cards/visa.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/items/MobileCase.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/items/MobileCase.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/items/Pencils.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/items/Pencils.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/items/TShirt.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/items/TShirt.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modals/deliveryMethodModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/components/modals/deliveryMethod/deliveryMethod.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modals/modals.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modals/modalsGeneral.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/components/modals/modalsGeneral.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modals/paymentMethodModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/components/modals/paymentMethod/paymentMethod.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/styles/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/styles/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/styles/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/components/content/main/items/items.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/components/content/main/items/items.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/components/content/main/items/notFound/notFound.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/components/content/main/items/notFound/notFound.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/components/content/main/items/selected/selected.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/components/content/main/items/selected/selected.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/initialData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/initialData.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +70,7 @@
       <workItem from="1691927778684" duration="48000" />
       <workItem from="1691928355092" duration="37257000" />
       <workItem from="1696541021903" duration="19793000" />
-      <workItem from="1696626567777" duration="29537000" />
+      <workItem from="1696626567777" duration="42261000" />
     </task>
     <servers />
   </component>
