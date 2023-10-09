@@ -1,6 +1,6 @@
 'use strict'
 import {freezeHTML, scrollPosition, unfreezeHTML} from "../modalsGeneral.js";
-import {getSelectedWayToDeliver, getSelectedAddress, selectWayToDeliver, selectAddress} from "../../../initialData.js";
+import {getSelectedWayToDeliver, getSelectedAddress, selectWayToDeliver, selectAddress, removeAddress} from "../../../initialData.js";
 
 // init
 let _current_way_to_deliver = getSelectedWayToDeliver()
@@ -98,3 +98,19 @@ function setProperRadio(){
         document.querySelector(`.delivery-method-modal-content-container .delivery-addresses #customer-address-${getSelectedAddress().id}`).checked = true;
     }
 }
+
+
+// remove address logic -->
+
+document.querySelectorAll('.delivery-method-modal-content-container .address-item').forEach(address=>{
+    address.addEventListener('click', (e)=>{
+        if (!e.target.classList.contains('trashBin') && !e.target.parentNode.classList.contains('trashBin')) return;
+
+        let way = e.currentTarget.children[0].id.substring(0, e.currentTarget.children[0].id.length-2) === 'pick-up-address' ? 'pick-up-point' : 'courier';
+        let id = e.currentTarget.children[0].id.substring(e.currentTarget.children[0].id.length-1)
+        removeAddress(way, id)
+
+        e.currentTarget.remove();
+    })
+})
+

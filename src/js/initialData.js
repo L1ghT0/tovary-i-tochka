@@ -180,3 +180,11 @@ export function selectWayToDeliver(name){
 export function selectAddress(id){
     getSelectedWayToDeliver().addresses.forEach(address => address.id === id ? address.selected = true : address.selected = false)
 }
+
+export function removeAddress(way, id){
+    waysToDeliver.forEach(wayToDeliver => {
+        if(wayToDeliver.name === way){
+            wayToDeliver.addresses = wayToDeliver.addresses.filter(address => address.id !== id)
+        }
+    })
+}
