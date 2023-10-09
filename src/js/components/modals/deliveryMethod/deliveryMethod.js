@@ -91,9 +91,10 @@ document.querySelector('.delivery-method-modal .choose-button').addEventListener
 function setProperRadio(){
     document.querySelectorAll('.delivery-method-modal-content-container .delivery-addresses input[type="radio"]').forEach(radio => radio.checked = false)
 
-    if(getSelectedWayToDeliver().name === 'pick-up-point'){
+    if(getSelectedWayToDeliver().name === 'pick-up-point' && getSelectedAddress()){
         document.querySelector(`.delivery-method-modal-content-container .delivery-addresses #pick-up-address-${getSelectedAddress().id}`).checked = true;
-    } else {
+    }
+    if(getSelectedWayToDeliver().name === 'courier' && getSelectedAddress()){
         document.querySelector(`.delivery-method-modal-content-container .delivery-addresses #customer-address-${getSelectedAddress().id}`).checked = true;
     }
 }
