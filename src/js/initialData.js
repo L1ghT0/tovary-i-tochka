@@ -78,3 +78,33 @@ export function removeItem(id){
 export function getItem(id){
     return items.filter(item => item.id === id);
 }
+
+// cards
+const cards = [
+    {
+        name: 'mir',
+        selected: true,
+    },
+    {
+        name: 'visa',
+        selected: false,
+    },
+    {
+        name: 'mastercard',
+        selected: false,
+    },
+    {
+        name: 'maestro',
+        selected: false,
+    }
+]
+
+export function selectCard(name) {
+    if(!cards.filter(card => card.name === name).length) return; // no matches
+
+    cards.forEach(card => card.name === name ? card.selected = true : card.selected = false);
+}
+
+export function getSelectedCard(){
+    return cards.filter(card => card.selected)[0];
+}
