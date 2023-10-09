@@ -108,3 +108,75 @@ export function selectCard(name) {
 export function getSelectedCard(){
     return cards.filter(card => card.selected)[0];
 }
+
+
+// addresses:
+const waysToDeliver = [
+    {
+        name: 'pick-up-point',
+        selected: true, // as init value we open pick-up-points first
+        addresses: [
+            {
+                id: '0',
+                address: 'г. Бишкек, микрорайон Джал, улица Ахунбаева Исы, д. 67/1',
+                rating: '4.99',
+                selected: false
+            },
+            {
+                id: '1',
+                address: 'г. Бишкек, микрорайон Джал, улица Ахунбаева Исы, д. 67/1',
+                rating: '4.99',
+                selected: false
+            },
+            {
+                id: '2',
+                address: 'г. Бишкек, улица Табышалиева, д. 57',
+                rating: '4.99',
+                selected: false
+            }
+        ]
+    },
+    {
+        name: 'courier',
+        selected: false,
+        addresses: [
+            {
+                id: '0',
+                address: 'Бишкек, улица Табышалиева, 57',
+                selected: false,
+            },
+            {
+                id: '1',
+                address: 'Бишкек, улица Жукеева-Пудовкина, 77/1',
+                selected: false,
+            },
+            {
+                id: '2',
+                address: 'Бишкек, микрорайон Джал, улица Ахунбаева Исы, 67/1',
+                selected: false,
+            }
+        ]
+    }
+]
+export function getSelectedWayToDeliver(){
+    return waysToDeliver.filter(way => way.selected)[0] || null
+}
+
+export function getSelectedAddress(){
+    return getSelectedWayToDeliver().addresses.filter(address => address.selected)[0] || null
+}
+
+export function selectWayToDeliver(name){
+    if(!waysToDeliver.filter(way => way.name === name).length) return; // no matches
+
+    waysToDeliver.forEach(way => way.name === name ? way.selected = true : way.selected = false);
+    waysToDeliver.forEach(way => {
+        if(!way.selected){
+            way.addresses.forEach(address=>address.selected = false)
+        }
+    })
+}
+
+export function selectAddress(id){
+    getSelectedWayToDeliver().addresses.forEach(address => address.id === id ? address.selected = true : address.selected = false)
+}
