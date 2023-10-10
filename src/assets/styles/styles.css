@@ -2236,8 +2236,61 @@ footer{
 label{
     cursor: pointer;
 }
+/*Tabbar START--------------------------------------------------------->*/
+
+.tabbar-bottom{
+    display: none;
+}
+
+/*Tabbar MEDIA--------------------------------------------------------->*/
+
+@media screen and (max-width: 480px){
+    .tabbar-bottom{
+        display: block;
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+        height: 56px;
+        position: fixed;
+        top: 10000px;
+        padding: 0 13px;
+        background: #FFF;
+        /* Айфон / Тень от бара */
+        box-shadow: 0px -0.5px 0px 0px rgba(0, 0, 0, 0.30);
+        backdrop-filter: blur(2.5px);
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+    .tabbar-container{
+        height: 56px;
+        width: 100%;
+    }
+    .tabbar-bottom-nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 56px;
+    }
+    .tabbar-bottom-nav-item{
+        position: relative;
+    }
+    .tabbar-bottom-nav-item .red-circle-number{
+        top: -4px;
+        left: 17px;
+    }
+    #tabbar-bottom-heart .red-circle-number{
+        display: none;
+    }
+    .tabbar-bottom .tabbar-bottom-nav-item svg{
+        width: 28px;
+        height: 28px;
+        /*fill="#CB11AB"*/
+    }
+}
 
 
+
+/*Tabbar END--------------------------------------------------------->*/
 /*Modals START--------------------------------------------------------->*/
 
 

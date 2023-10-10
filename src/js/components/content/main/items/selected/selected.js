@@ -94,11 +94,16 @@ document.querySelectorAll('.organization-info-icon').forEach(item=>{
 
 // set amount of selected items
 let amount_of_selected_items = document.getElementById('amount-of-selected-items');
+let amount_of_selected_items_mobileTabbar = document.querySelector('.tabbar-bottom #tabbar-bottom-shopping-trolley .red-circle-number span')
 document.querySelector('.selected-items .items').addEventListener('click', (e)=>{
     if(document.querySelector('.selected-items .items').children.length === 0){ // if there's no items we hide the whole element
         document.querySelector('.header-shopping-trolley .red-circle-number').style.display = 'none'
+        document.querySelector('.tabbar-bottom #tabbar-bottom-shopping-trolley .red-circle-number').style.display = 'none'; // for mobile
     } else {
         document.querySelector('.header-shopping-trolley .red-circle-number').style.display = 'block'
         amount_of_selected_items.innerText = document.querySelector('.selected-items .items').children.length
+
+        document.querySelector('.tabbar-bottom #tabbar-bottom-shopping-trolley .red-circle-number').style.display = 'block'; // for mobile
+        amount_of_selected_items_mobileTabbar.innerText = document.querySelector('.selected-items .items').children.length
     }
 })
