@@ -16,6 +16,7 @@ const tShirtDiscount = 100 - (TShirtPrice_withDiscount * 100) / TShirtPrice_with
 const mobileCaseDiscount = 100 - (mobileCasePrice_withDiscount * 100) / mobileCasePrice_withoutDiscount;
 const pencilDiscount = 100 - (pencilPrice_withDiscount * 100) / pencilPrice_withoutDiscount;
 
+
 export let items = [
     {
         id: "0",
@@ -187,4 +188,16 @@ export function removeAddress(way, id){
             wayToDeliver.addresses = wayToDeliver.addresses.filter(address => address.id !== id)
         }
     })
+}
+
+
+export let amountOfLikedItems = 0;
+
+export function increaseAmountOfLikedItems(){
+    amountOfLikedItems++;
+}
+
+export function decreaseAmountOfLikedItems(){
+    if(amountOfLikedItems < 1) return;
+    amountOfLikedItems--;
 }

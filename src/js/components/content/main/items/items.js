@@ -1,6 +1,12 @@
 import './selected/selected.js'
 import './notFound/notFound.js'
-import {removeItem, getItem} from "../../../../initialData.js";
+import {
+    removeItem,
+    getItem,
+    amountOfLikedItems,
+    increaseAmountOfLikedItems,
+    decreaseAmountOfLikedItems
+} from "../../../../initialData.js";
 import {refresh_data} from "../../../../index.js";
 
 // I have put animation here because this is something that has both "selected" and "notFound" items
@@ -104,7 +110,7 @@ function disableArrow(target) {
 }
 
 
-// trash-bin logic --->
+// trash-bin (remove) logic --->
 document.querySelectorAll('.item').forEach(item => {
     item.addEventListener('click', (e) => {
         if (!e.target.classList.contains('trashBin') && !e.target.parentNode.classList.contains('trashBin')) return;
@@ -124,5 +130,28 @@ document.querySelectorAll('.item').forEach(item => {
 })
 
 
+// heart click (like) logic --->
+document.querySelectorAll('.item .heart').forEach(heart => {
+    heart.addEventListener('click', (e) => {
+        e.currentTarget.classList.contains('liked')
+            ? e.currentTarget.classList.remove('liked')
+            : e.currentTarget.classList.add('liked')
+
+        if(e.currentTarget.classList.contains('liked')){
+            e.currentTarget.children[0].style.fill = 'rgba(203, 17, 171, 1)';
+            increaseAmountOfLikedItems();
+        } else {
+            e.currentTarget.children[0].style.fill = 'rgba(0, 0, 0, 1)';
+            decreaseAmountOfLikedItems();
+        }
+
+        if(amountOfLikedItems > 0){
+            document.querySelector('#tabbar-bottom-heart .red-circle-number span').innerText = amountOfLikedItems
+            document.querySelector('#tabbar-bottom-heart .red-circle-number').style.display = 'block'
+        } else {
+            document.querySelector('#tabbar-bottom-heart .red-circle-number').style.display = 'none'
+        }
+    })
+})
 
 
